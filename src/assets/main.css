@@ -1,0 +1,12 @@
+@import "based.css";
+
+:root{
+  --primary-font-family: 'Great Vibes', cursive;
+  --secondary-font-family: 'Charm', cursive;
+  --tertiary-font-family: 'Open Sans', sans-serif;
+
+  --primary-color: #EE7828;
+  --secondary-color: #2C2C2C;
+  --tertiary-color: #806D61;
+  --quaternary-color: #C5BAAA;
+}
