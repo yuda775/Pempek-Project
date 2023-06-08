@@ -1,20 +1,24 @@
 <script setup>
   import Navbar from './components/Navbar.vue';
-  import jumbotron from './components/jumbotron.vue';
+  import Jumbotron from './components/Jumbotron.vue';  
+  import Marketplace from './components/Marketplace.vue';
+  import TentangKami from './components/TentangKami.vue';
 </script>
 
 <template>  
   <header>
     <Navbar/>
   </header>
-  <main>
-    <jumbotron/>
+  <main>    
+    <Jumbotron/>    
+    <Marketplace/>
+    <TentangKami/>
   </main>
-  <main></main>
 </template>
 
 <style scoped>
   main {
     height: 20000px;
   }
+  
 </style>
