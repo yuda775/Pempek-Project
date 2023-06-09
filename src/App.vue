@@ -3,6 +3,7 @@
   import Jumbotron from './components/Jumbotron.vue';  
   import Marketplace from './components/Marketplace.vue';
   import TentangKami from './components/TentangKami.vue';
+  import Menu from './components/Menu.vue';
 </script>
 
 <template>  
@@ -13,6 +14,7 @@
     <Jumbotron/>    
     <Marketplace/>
     <TentangKami/>
+    <Menu/>
   </main>
 </template>
 
