@@ -1,5 +1,5 @@
 <template>
-  <div class="card p-3">
+  <div class="card card-testimoni p-3">
     <div class="card-body d-flex flex-column justify-content-around">
       <img :src="profilePhoto" alt="Profile Photo" class="card-img-top rounded-circle">
       <div class="py-4">
@@ -12,21 +12,20 @@
 
 <script>
 export default {
-    props: {
-        profilePhoto: {
-            type: String,
-            required: true
-        },
-        username: {
-            type: String,
-            required: true
-        },
-        description: {
-            type: String,
-            required: true
-        }
+  props: {
+    profilePhoto: {
+      type: String,
+      required: true
     },
-    components: { Vectorleft }
+    username: {
+      type: String,
+      required: true
+    },
+    description: {
+      type: String,
+      required: true
+    }
+  }
 }
 
 
@@ -34,25 +33,20 @@ export default {
 
 <style scoped>
 
-.card {
+.card-testimoni {
   height: 400px;
 }
-
 .card-img-top {
   margin: 0 auto;  
   width: 100px;
   height: 100px;
 }
-
 .card-title {
   font-size: 22px;
   font-weight: 600;
 }
-
 .card-text {  
   font-size: 14px;
   border-left: 5px solid var(--primary-color);
 }
-
-
 </style>
