@@ -1,69 +1,81 @@
-<template>
-  <div class="jumbotron">
-    <div class="container">
-      <div class="content">
-        <h1>Cari Makanan Tradisional <br> Palembang ?</h1>
-        <p>
-          Pempek Princess Jawabannya, Asli <br>
-          buatan orang Palembang.
-        </p>
-        <a class="link" href="#menu">View Our Menu</a>         
+<script setup>
+import VectorJumbotron from './icons/WavesJumbotron.vue';
+</script>
+
+<template>    
+<div class="position-relative overflow-x-hidden"> 
+  <div class="container">
+    <div class="jumbotron row align-items-center z-2">
+      <div class="title col-lg-6">
+        <h1 class="headline-1">Cari Makanan Tradisional <br> Palembang ?</h1>
+        <p class="lead">Pempek Princess jawabannya, Asli <br> buatan orang Palembang</p>
+        <a class="link" href="#menu">View Our Menu</a>
       </div>
-      <figure>
-        <img class="enlarged-image" src="./icons/pempek Jumbotron.svg" alt="gambar pempek">
-      </figure>          
-    </div>
+      <div class="col-lg-6 mt-5" style="filter: drop-shadow(2px 2px 70px rgba(0, 0, 0, 0.25));">
+        <img src="./icons/PempekJumbotron.png" alt="">    
+      </div>
+    </div>  
   </div>
+  <div class="vector-jumbotron">
+    <VectorJumbotron/>  
+  </div>
+</div>
 </template>
 
+
 <style>
-
 .jumbotron {
-  aspect-ratio: 16/9;
-  background-image: url(./icons/Vector.svg);
-  background-repeat: no-repeat;
-  background-position: right;
-  background-size: contain;
+  position: relative;
+  padding-top: 100px;  
+  padding-bottom: 200px;
+  justify-content: space-evenly;  
+  z-index: 1;   
 }
 
-.content {
-  flex: 1;
-  padding-right: 20px;
-  padding-top: 200px;
-}
-
-h1 {
-  padding: 1px 20px;
-  border-left: 10px solid var(--primary-color);
+.headline-1 {
+  font-size: 42px;
   font-weight: 700;
   color: var(--secondary-color);
-  font-size: 3.2vw;
+  border-left: 10px solid var(--primary-color);
+  padding-left: 10px;
 }
 
-p {
-  margin-top: 30px;
-  font-size: 24px;
-  margin-bottom: 30px;
-}
-
-.link {  
+.link {
+  padding: 10px 25px;
   background-color: var(--primary-color);
-  padding: 10px 25px;font-weight: 700;
   color: white;
   text-decoration: none;
-  font-weight: 18px;
-  background: #FF9F0D;
+  font-weight: 700;
   border-radius: 20px;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
+.vector-jumbotron {
+  position: absolute;  
+  top: 0px;
+  right: 0px;  
+  z-index: 0;
+}
 
-.enlarged-image {
-  position: absolute;
-  width: 60vw;
-  top: 120px;
-  right: 10px;
-  filter: drop-shadow(28px 44px 90px rgba(0, 0, 0, 0.25));
+@media (max-width: 767.98px) {
+  .headline-1 {
+    font-size: 32px;
+    border-left: 5px solid var(--primary-color);
+  }
+
+  .lead {
+    font-size: 16px;
+  }
+
+  .link {
+    font-size: 12px;
+  }
+
+  .vector-jumbotron {
+    position: absolute;
+    top: 80px;
+    right: -450px;          
+  }
+
 }
 
 </style>

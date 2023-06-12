@@ -8,17 +8,19 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav mx-auto">
-          <a class="nav-link" :class="{ 'active': activeSection === 'beranda' }" :href="'#beranda'">Beranda</a>
-          <a class="nav-link" :class="{ 'active': activeSection === 'menu' }" :href="'#menu'">Menu</a>
-          <a class="nav-link" :class="{ 'active': activeSection === 'tentang-kami' }" :href="'#tentang-kami'">Tentang Kami</a>
+          <a class="nav-link" :class="{ 'active': activeSection === 'beranda' }" href="#beranda">Beranda</a>
+          <a class="nav-link" :class="{ 'active': activeSection === 'tentang-kami' }" href="#tentang-kami">Tentang
+            Kami</a>
+          <a class="nav-link" :class="{ 'active': activeSection === 'menu' }" href="#menu">Menu</a>
         </div>
-        <div class="button">
-          <a class="fw-bold" :href="'#kontak'">Kontak</a>
+        <div class="button" :class="{ 'scrolled': isScrolled }">
+          <a class="fw-bold" href="#kontak">Kontak</a>
         </div>
       </div>
     </div>
   </nav>
 </template>
+
 
 
 <script>
@@ -42,7 +44,7 @@ export default {
       this.setActiveSection();
     },
     setActiveSection() {
-      const sections = ['beranda', 'menu', 'tentang-kami'];
+      const sections = ['beranda', 'tentang-kami', 'menu'];
       const scrollPosition = window.pageYOffset + window.innerHeight / 2;
       const activeSectionIndex = sections.findIndex(section => {
         const element = document.getElementById(section);
@@ -141,5 +143,10 @@ export default {
 /* Gaya untuk navbar-link saat dihover (bold) */
 .navbar .nav-link:hover {
   font-weight: bold;
+}
+
+.button.scrolled a {
+  color: #FFFFFF;
+  background-color: var(--primary-color); /* Ubah warna background sesuai kebutuhan */
 }
 </style>

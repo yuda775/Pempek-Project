@@ -1,11 +1,15 @@
+<script setup>
+import VectorTentangKami from './icons/tentang-kami.vue';
+</script>
+
 <template>
-  <div class="tentang-kami">
-    <div class="container">
-      <h2>Tentang-kami</h2>
+  <div class="position-relative">
+    <div class="container position-relative z-1">
+      <h2 class="headline-2">Tentang-kami</h2>
       <div class="line"></div>
-      <div class="d-flex align-items-center justify-content-center">
-        <img class="col-md-6" src="./icons/pempek 1.png">
-        <div class="col-md-6 description lh-lg  px-5" style="text-indent: 45px;">
+      <div class="row align-items-center tentangKami-content mt-5">
+        <img class="col-lg-5" src="./icons/PempekJumbotron.png" style="filter: drop-shadow(2px 2px 70px rgba(0, 0, 0, 0.25));">
+        <div class="col-lg-7 description lh-lg  px-5" style="text-indent: 45px;">
           <p class="fs-6">
             Kami adalah sebuah usaha mikro, kecil, dan menengah (UMKM) yang berfokus pada penjualan produk pempek buatan rumah. Dengan bangga, kami menghadirkan pempek asli buatan orang Palembang, yang memiliki cita rasa autentik dan kualitas terbaik.
           </p>
@@ -17,18 +21,24 @@
         </div>
       </div>
     </div>
+    <div class="vector-tentang-kami position-absolute z-0">
+        <VectorTentangKami/>
+    </div>
   </div>
 </template>
 
-<style>
-  .tentang-kami {
-    background-image: url(./icons/tentang-kami.svg);
-    background-repeat: no-repeat;
-    height: 1000px;
+<style>  
+  .vector-tentang-kami {
+    top: 0px;
+    left: 0px;
   }
 
-  h2 {
-    padding-top: 100px;
+  .tentangKami-content {
+    justify-content: center;
+  }
+
+  .headline-2 {
+  padding-top: 100px;
     font-size: 62px;
     font-weight: 700;
     text-align: center;
