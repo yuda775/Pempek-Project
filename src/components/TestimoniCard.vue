@@ -12,20 +12,21 @@
 
 <script>
 export default {
-  props: {
-    profilePhoto: {
-      type: String,
-      required: true
+    props: {
+        profilePhoto: {
+            type: String,
+            required: true
+        },
+        username: {
+            type: String,
+            required: true
+        },
+        description: {
+            type: String,
+            required: true
+        }
     },
-    username: {
-      type: String,
-      required: true
-    },
-    description: {
-      type: String,
-      required: true
-    }
-  }
+    components: { Vectorleft }
 }
 
 
@@ -52,4 +53,6 @@ export default {
   font-size: 14px;
   border-left: 5px solid var(--primary-color);
 }
+
+
 </style>
