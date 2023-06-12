@@ -63,6 +63,7 @@ export default {
 <style>
 .navbar {
   font-family: var(--primary-font-family);  
+  height: 60px;
 }
 
 .nav-link {
@@ -76,7 +77,7 @@ export default {
   font-size: 18px;
   color: var(--primary-color);
   background-color: #FFFFFF;
-  padding: 8px 30px;
+  padding: 5px 30px;
   border-radius: 2px;
   text-decoration: none;
   transition: background-color 0.8s;
