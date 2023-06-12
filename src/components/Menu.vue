@@ -6,8 +6,9 @@
                 <div class="line"></div>
                 <div class="d-flex justify-content-around align-items-center flex-wrap mt-5">
                     <div class="col-md-4 mt-5" v-for="card in cards" :key="card.id">
-                        <div class="card card-menu">
-                            <img :src="card.image" class="card-img-top" alt="Card Image">
+
+                      <div class="card card-menu">
+                          <img :src="card.image" class="card-img-top" alt="Card Image">
                             <div class="card-body">
                                 <h5 class="card-title">{{ card.title }}</h5>
                                 <p class="card-text">{{ card.description }}</p>
@@ -15,6 +16,7 @@
                             </div>
                         </div>
                     </div>
+                    
                 </div>
             </div>
        </div>
@@ -32,6 +34,10 @@
    .card-menu {
     width: 400px;
     height: 600px;
+   }   
+
+   .card {
+    border-radius: 30px 10px 0px 0px;
    }
  </style>
  
@@ -45,7 +51,8 @@
                  id: 1,
                  title: 'Card 1',
                  description: 'This is card 1 description.',
-                 link: '#'
+                 link: '',
+                 image: 'src/assets/images/adaan.png'
                },
                {
                  id: 2,
