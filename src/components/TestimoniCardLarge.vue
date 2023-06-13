@@ -1,15 +1,20 @@
 <template>
-  <div class="card p-3">
-    <div class="card-body d-flex flex-column justify-content-around">
-      <img :src="profilePhoto" alt="Profile Photo" class="card-img-top rounded-circle">
-      <div class="py-4">        
-        <h5 class="card-title text-center p-2">{{ username }}</h5>
-        <p class="card-text px-3 py-2">{{ description }}</p>
-      </div>
+  <div class="text-center testimonial">
+    <div class="profile-photo my-3">
+      <img :src="profilePhoto" class="rounded-circle">
+    </div>
+    <div class="username-testimonial">
+      <h4 class="headline-3 fw-bold">{{ username }}</h4>
+    </div>
+    <hr class="m-4">
+    <div class="rating-testimonial">
+      <span class="rating-icon" v-for="n in rating" :key="n">&#9733;</span>
+    </div>
+    <div class="description-testimonial">
+      <p class="mt-3 px-4">{{ description }}</p>
     </div>
   </div>
 </template>
-
 
 <script>
 export default {
@@ -25,30 +30,39 @@ export default {
     description: {
       type: String,
       required: true
+    },
+    rating: {
+      type: Number,
+      required: true
     }
   }
 }
-
-
 </script>
 
 <style scoped>
-.card {
-  height: 480px;
+.testimonial {
+  width: 350px;
+  border-radius: 10px;
+  border-top: 10px solid gold;  
 }
-.card-img-top {
-  margin: 0 auto;
-  width: 140px;
+
+.profile-photo img {
+  margin: auto;
+  width: 115px;
+}
+
+.profile-photo {
   height: 140px;
 }
 
-.card-title {
-  font-size: 24px;
-  font-weight: 600;
+.rating-testimonial {
+  margin-top: 10px;
 }
 
-.card-text {
-  font-size: 16px;
-  border-left: 5px solid var(--primary-color);
+.rating-icon {
+  font-size: 24px;
+  color: gold;
 }
+
+@media (max-width: 768px) {}
 </style>

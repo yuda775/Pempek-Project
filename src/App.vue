@@ -77,31 +77,25 @@ import Footer from './components/Footer.vue';
       <div class="container">
         <h2 class="mt-4 mb-3 text-center headline-2">Testimoni</h2>
         <div class="line"></div>
-        <div class="vectortestimoni">
-          <div class="vector-left">
-            <vectorleft />
-          </div>
-          <div class="vector-right">
-            <vectorright />
-          </div>
-        </div>
-        <div class="cards row mt-5 align-items-center">
-          <div class="col-md-4">
-            <div class="d-flex justify-content-center px-5">
-              <TestimoniCard profilePhoto="src/assets/images/profile/aldi.jpg" username="@john.doe"
-                description="Maaci umi kirimannya, ini pempek kates yang bisa dikirim ke jakarta yang isinyo aman dan masih seger. mantabb" />
+        <div class="row mt-5 align-items-stretch justify-content-around">
+          <div class="col-lg-4 col-md-6">
+            <div class="d-flex justify-content-center">
+              <TestimoniCardLarge profilePhoto="src/assets/images/profile/aldi.jpg" 
+              username="@john.doe"
+              description="Maaci umi kirimannya, ini pempek kates yang bisa dikirim ke jakarta yang isinyo aman dan masih seger. mantabb" 
+              :rating="4"/>              
             </div>
           </div>
-          <div class="col-md-4">
+          <div class="col-lg-4 col-md-6">
             <div class="d-flex justify-content-center">
               <TestimoniCardLarge profilePhoto="src/assets/images/profile/aldi.jpg" username="@jane.smith"
-                description="Alhamdulillah, Laksana nyo nyampe sebelum buko plus bonus talam ubi ungu, baik banget mevaah, mokaseh @pempek_princess. “maka nikmat Tuhan manalagi yg kau dusta”" />
+                description="Alhamdulillah, Laksana nyo nyampe sebelum buko plus bonus talam ubi ungu, baik banget mevaah, mokaseh @pempek_princess. “maka nikmat Tuhan manalagi yg kau dusta”" :rating="5" />
             </div>
           </div>
-          <div class="col-md-4">
-            <div class="d-flex justify-content-center px-5">
-              <TestimoniCard profilePhoto="src/assets/images/profile/aldi.jpg" username="@alex.williams"
-                description="Pempek Princess, lezatnya sebuah pempek tak hanya memiliki cita rasa enak dilidah saja, tetapi juga perpaduan bumbu yang menggugah selera serta membuat ketagihan." />
+          <div class="col-lg-4 col-md-6">
+            <div class="d-flex justify-content-center">
+              <TestimoniCardLarge profilePhoto="src/assets/images/profile/aldi.jpg" username="@alex.williams"
+                description="Pempek Princess, lezatnya sebuah pempek tak hanya memiliki cita rasa enak dilidah saja, tetapi juga perpaduan bumbu yang menggugah selera serta membuat ketagihan." :rating="5"/>
             </div>
           </div>
         </div>
