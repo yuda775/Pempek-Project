@@ -8,6 +8,7 @@ import WavesJumbotron from './components/icons/WavesJumbotron.vue';
 import VectorTentangKami from './components/icons/tentang-kami.vue';
 import vectorleft from './components/icons/vectorleft.vue';
 import vectorright from './components/icons/vectorright.vue';
+import Footer from './components/Footer.vue';
 </script>
 
 <template>
@@ -110,6 +111,9 @@ import vectorright from './components/icons/vectorright.vue';
       <div class="maps">
         <iframe width="100%" height="100%" id="gmap_canvas" src="https://maps.google.com/maps?q=-7.052070,107.543132&t=&z=10&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
       </div>
+    </section>
+    <section id="Footer">
+      <Footer />
     </section>
   </main>
 </template>
