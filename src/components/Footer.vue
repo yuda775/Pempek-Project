@@ -5,11 +5,9 @@ import vectorfooter from './icons/vectorfooter.vue';
 <template>
     <div class="footer-content">
         <img class="logo" src="./icons/pempek.png" alt="brand-logo" width="125">
-        <i class="icon" src="./icons/facebook.png" width="125"></i>
-        <i class="icon" src="./icons/instagram.png"></i>
-        <i class="icon" src="./icons/email.png"></i>
+        <i class="icon" src="./icons/facebook.png"  width="125"></i>
         <p class="alamat">Unnamed Road, Nagrak, Kec. Cangkuang, Kabupaten Bandung, Jawa Barat 40238</p>
-        <p>&copy; {{ currentYear }} All rights reserved by Nash Tech</p>
+        <p>&copy; {{ currentYear }} All rights reserved by Nash<span class="kuning"> Tech</span></p>
     </div>
     <div class="vectorfooter">
         <vectorfooter />
@@ -43,6 +41,10 @@ export default {
     position: absolute;
     right: 100px;
     bottom: 4000px;
+}
+
+.kuning{
+    color: var(--primary-color);
 }
 
 .logo {
