@@ -1,6 +1,6 @@
 <template>
   <div class="text-center testimonial">
-    <div class="profile-photo my-3">
+    <div class="profile-photo my-4">
       <img :src="profilePhoto" class="rounded-circle">
     </div>
     <div class="username-testimonial">
@@ -48,7 +48,7 @@ export default {
 
 .profile-photo img {
   margin: auto;
-  width: 115px;
+  width: 150px;
 }
 
 .profile-photo {

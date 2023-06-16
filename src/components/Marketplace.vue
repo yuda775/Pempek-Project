@@ -3,7 +3,7 @@
     <div class="row justify-content-evenly p-5">
       <div class="marketplace col-lg-4">
         <a href="">
-          <img src="./icons/tokopedia.png" >
+          <img src="./icons/tokopedia.png">
         </a>
       </div>
       <div class="marketplace col-lg-4">

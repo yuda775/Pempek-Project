@@ -1,3 +1,23 @@
+<script setup>
+import Navbar from './components/Navbar.vue';
+import Marketplace from './components/Marketplace.vue';
+import TestimoniCardLarge from './components/TestimoniCardLarge.vue';
+import WavesJumbotron from './components/icons/WavesJumbotron.vue';
+import VectorTentangKami from './components/icons/tentang-kami.vue';
+import Footer from './components/Footer.vue';
+import Menu from './components/Menu.vue';
+import MenuExpand from './components/MenuExpand.vue';
+
+
+import { ref } from 'vue'
+
+const expand = ref(true)
+function toggleExpand() {
+  expand.value = !expand.value
+}
+</script>
+
+
 <template>
   <header>
     <Navbar />
@@ -24,7 +44,10 @@
       </div>
     </section>
 
-    <Marketplace />
+    <section class="marketplace">
+      <Marketplace />
+    </section>
+
     <section id="tentang-kami">
       <div class="position-relative">
         <div class="container position-relative z-1">
@@ -58,18 +81,18 @@
     </section>
 
     <section id="menu">
-    <h2 class="headline-2">All Menu</h2>
-    <div class="line"></div>
-    <Menu />
-    <div v-if="showMenuExpand" class="MenuExpand">
-      <MenuExpand />
-    </div>
-    <button class="lihat mt-5" @click="toggleMenuExpand">
-      {{ showMenuExpand ? 'Tampilkan Lebih Sedikit' : 'Lihat Lebih Banyak' }}
-    </button>
-  </section>
+      <h2 class="headline-2">All Menu</h2>
+      <div class="line"></div>
+      <Menu />
+      <div class="MenuExpand">
+        <MenuExpand v-if="expand"/>
+      </div>
+      <button class="lihat mt-5" @click="toggleExpand">
+        {{ expand ? 'Tampilkan Lebih Sedikit' : 'Lihat Lebih Banyak' }}
+      </button>
+    </section>
 
-    <section id="testimoni">
+    <section class="testimoni">
       <div class="container">
         <h2 class="mt-4 mb-3 text-center headline-2">Testimoni</h2>
         <div class="line"></div>
@@ -98,13 +121,13 @@
         </div>
       </div>
     </section>
-    <section>
-      <div class="maps">
+    
+      <section class="maps">
         <iframe width="100%" height="100%" id="gmap_canvas"
           src="https://maps.google.com/maps?q=-7.052070,107.543132&t=&z=10&ie=UTF8&iwloc=&output=embed" frameborder="0"
           scrolling="no" marginheight="0" marginwidth="0"></iframe>
-      </div>
-    </section>
+      </section>    
+
     <section id="Footer">
       <Footer />
     </section>
@@ -247,36 +270,3 @@ main {
   }
 }
 </style>
-
-
-<script setup>
-import Navbar from './components/Navbar.vue';
-import Marketplace from './components/Marketplace.vue';
-import TestimoniCardLarge from './components/TestimoniCardLarge.vue';
-import WavesJumbotron from './components/icons/WavesJumbotron.vue';
-import VectorTentangKami from './components/icons/tentang-kami.vue';
-import Footer from './components/Footer.vue';
-import Menu from './components/Menu.vue';
-import MenuExpand from './components/MenuExpand.vue';
-
-
-</script>
-
-<script>
-import { ref } from 'vue';
-
-export default {
-  setup() {
-    const showMenuExpand = ref(false);
-
-    const toggleMenuExpand = () => {
-      showMenuExpand.value = !showMenuExpand.value;
-    };
-
-    return {
-      showMenuExpand,
-      toggleMenuExpand
-    };
-  }
-};
-</script>

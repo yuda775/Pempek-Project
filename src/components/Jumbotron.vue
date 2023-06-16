@@ -3,23 +3,7 @@ import VectorJumbotron from './icons/WavesJumbotron.vue';
 </script>
 
 <template>    
-<div class="position-relative overflow-x-hidden"> 
-  <div class="container">
-    <div class="jumbotron row align-items-center z-2">
-      <div class="title col-lg-6">
-        <h1 class="headline-1">Cari Makanan Tradisional <br> Palembang ?</h1>
-        <p class="lead">Pempek Princess jawabannya, Asli <br> buatan orang Palembang</p>
-        <a class="link" href="#menu">View Our Menu</a>
-      </div>
-      <div class="col-lg-6 mt-5" style="filter: drop-shadow(2px 2px 70px rgba(0, 0, 0, 0.25));">
-        <img src="./icons/PempekJumbotron.png" alt="">    
-      </div>
-    </div>  
-  </div>
-  <div class="vector-jumbotron">
-    <VectorJumbotron/>  
-  </div>
-</div>
+
 </template>
 
 
