@@ -1,9 +1,6 @@
 <template>
-  <div id="allmenu">
     <div class="container">
       <div class="row">
-        <h2 class="headline-2">All Menu</h2>
-        <div class="line"></div>
         <div class="d-flex justify-content-around align-items-center flex-wrap mb-5">
           <div class="col-lg-4 mt-5" v-for="card in cards" :key="card.id">
             <div class="card-menu">
@@ -19,9 +16,7 @@
           </div>
         </div>
       </div>
-      <a class="lihat mt-5" href="#lihat">Lihat lebih banyak</a>
     </div>
-  </div>
 </template>
    
 <style>
@@ -42,20 +37,6 @@
   width: 400px;
 }
 
-.lihat {
-  margin: 0 auto;
-  display: block;
-  width: 350px;
-  text-align: center;
-  padding: 15px 40px;
-  background-color: var(--primary-color);
-  color: white;
-  text-decoration: none;
-  font-size: 24px;
-  font-weight: 700;
-  border-radius: 20px;
-  box-shadow: 0px 4px 15px 2px rgba(0, 0, 0, 0.25);
-}
 
 .price {
   border-radius: 0px 20px 0px 0px;

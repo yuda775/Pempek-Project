@@ -1,16 +1,3 @@
-<script setup>
-import Navbar from './components/Navbar.vue';
-import Marketplace from './components/Marketplace.vue';
-import Menu from './components/Menu.vue';
-import TestimoniCard from './components/TestimoniCard.vue';
-import TestimoniCardLarge from './components/TestimoniCardLarge.vue';
-import WavesJumbotron from './components/icons/WavesJumbotron.vue';
-import VectorTentangKami from './components/icons/tentang-kami.vue';
-import vectorleft from './components/icons/vectorleft.vue';
-import vectorright from './components/icons/vectorright.vue';
-import Footer from './components/Footer.vue';
-</script>
-
 <template>
   <header>
     <Navbar />
@@ -71,8 +58,17 @@ import Footer from './components/Footer.vue';
     </section>
 
     <section id="menu">
-      <Menu />
-    </section>
+    <h2 class="headline-2">All Menu</h2>
+    <div class="line"></div>
+    <Menu />
+    <div v-if="showMenuExpand" class="MenuExpand">
+      <MenuExpand />
+    </div>
+    <button class="lihat mt-5" @click="toggleMenuExpand">
+      {{ showMenuExpand ? 'Tampilkan Lebih Sedikit' : 'Lihat Lebih Banyak' }}
+    </button>
+  </section>
+
     <section id="testimoni">
       <div class="container">
         <h2 class="mt-4 mb-3 text-center headline-2">Testimoni</h2>
@@ -80,22 +76,23 @@ import Footer from './components/Footer.vue';
         <div class="row mt-5 align-items-stretch justify-content-around">
           <div class="col-lg-4 col-md-6">
             <div class="d-flex justify-content-center">
-              <TestimoniCardLarge profilePhoto="src/assets/images/profile/aldi.jpg" 
-              username="@john.doe"
-              description="Maaci umi kirimannya, ini pempek kates yang bisa dikirim ke jakarta yang isinyo aman dan masih seger. mantabb" 
-              :rating="4"/>              
+              <TestimoniCardLarge profilePhoto="src/assets/images/profile/aldi.jpg" username="@john.doe"
+                description="Maaci umi kirimannya, ini pempek kates yang bisa dikirim ke jakarta yang isinyo aman dan masih seger. mantabb"
+                :rating="4" />
             </div>
           </div>
           <div class="col-lg-4 col-md-6">
             <div class="d-flex justify-content-center">
               <TestimoniCardLarge profilePhoto="src/assets/images/profile/aldi.jpg" username="@jane.smith"
-                description="Alhamdulillah, Laksana nyo nyampe sebelum buko plus bonus talam ubi ungu, baik banget mevaah, mokaseh @pempek_princess. “maka nikmat Tuhan manalagi yg kau dusta”" :rating="5" />
+                description="Alhamdulillah, Laksana nyo nyampe sebelum buko plus bonus talam ubi ungu, baik banget mevaah, mokaseh @pempek_princess. “maka nikmat Tuhan manalagi yg kau dusta”"
+                :rating="5" />
             </div>
           </div>
           <div class="col-lg-4 col-md-6">
             <div class="d-flex justify-content-center">
               <TestimoniCardLarge profilePhoto="src/assets/images/profile/aldi.jpg" username="@alex.williams"
-                description="Pempek Princess, lezatnya sebuah pempek tak hanya memiliki cita rasa enak dilidah saja, tetapi juga perpaduan bumbu yang menggugah selera serta membuat ketagihan." :rating="5"/>
+                description="Pempek Princess, lezatnya sebuah pempek tak hanya memiliki cita rasa enak dilidah saja, tetapi juga perpaduan bumbu yang menggugah selera serta membuat ketagihan."
+                :rating="5" />
             </div>
           </div>
         </div>
@@ -103,7 +100,9 @@ import Footer from './components/Footer.vue';
     </section>
     <section>
       <div class="maps">
-        <iframe width="100%" height="100%" id="gmap_canvas" src="https://maps.google.com/maps?q=-7.052070,107.543132&t=&z=10&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+        <iframe width="100%" height="100%" id="gmap_canvas"
+          src="https://maps.google.com/maps?q=-7.052070,107.543132&t=&z=10&ie=UTF8&iwloc=&output=embed" frameborder="0"
+          scrolling="no" marginheight="0" marginwidth="0"></iframe>
       </div>
     </section>
     <section id="Footer">
@@ -139,6 +138,21 @@ main {
   font-size: 62px;
   font-weight: 700;
   text-align: center;
+}
+
+.lihat {
+  margin: 0 auto;
+  display: block;
+  width: 350px;
+  text-align: center;
+  padding: 15px 40px;
+  background-color: var(--primary-color);
+  color: white;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: 700;
+  border-radius: 20px;
+  box-shadow: 0px 4px 15px 2px rgba(0, 0, 0, 0.25);
 }
 
 .line {
@@ -184,7 +198,7 @@ main {
   right: 400px;
 }
 
-.maps{
+.maps {
   margin-top: 200px;
   width: 100%;
   height: 550px;
@@ -231,4 +245,38 @@ main {
   .description-tentang-kami {
     margin-top: 25px;
   }
-}</style>
+}
+</style>
+
+
+<script setup>
+import Navbar from './components/Navbar.vue';
+import Marketplace from './components/Marketplace.vue';
+import TestimoniCardLarge from './components/TestimoniCardLarge.vue';
+import WavesJumbotron from './components/icons/WavesJumbotron.vue';
+import VectorTentangKami from './components/icons/tentang-kami.vue';
+import Footer from './components/Footer.vue';
+import Menu from './components/Menu.vue';
+import MenuExpand from './components/MenuExpand.vue';
+
+
+</script>
+
+<script>
+import { ref } from 'vue';
+
+export default {
+  setup() {
+    const showMenuExpand = ref(false);
+
+    const toggleMenuExpand = () => {
+      showMenuExpand.value = !showMenuExpand.value;
+    };
+
+    return {
+      showMenuExpand,
+      toggleMenuExpand
+    };
+  }
+};
+</script>
