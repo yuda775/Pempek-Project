@@ -112,9 +112,9 @@
 </template>
 
 <style scoped>
-main {
+/* main {
   height: 20000px;
-}
+} */
 
 .vector-tentang-kami {
   top: 0px;
