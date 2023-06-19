@@ -1,22 +1,22 @@
 <template>
-    <div class="container">
-        <div class="row">
-            <div class="d-flex justify-content-around align-items-center flex-wrap mb-5">
-                <div class="col-lg-4 mt-5" v-for="card in cards" :key="card.id">
-                    <div class="card-menu">
-                        <img :src="card.image" class="card-img-top" alt="Card Image">
-                        <div class="card-body mt-5">
-                            <h3 class="card-title px-4 fs-2">{{ card.title }}</h3>
-                            <p class="card-text px-4 mt-5 fs-5">{{ card.description }}</p>
-                        </div>
-                        <div class="pb-2">
-                            <p class="price">{{ card.price }}</p>
-                        </div>
-                    </div>
-                </div>
+  <div class="container">
+    <div class="row">
+      <div class="d-flex justify-content-around align-items-center flex-wrap mb-2">
+        <div class="col-lg-4 mt-5" v-for="card in cards" :key="card.id">
+          <div class="card-menu">
+            <img :src="card.image" class="card-img-top" alt="Card Image" >
+            <div class="card-body mt-3">
+              <h3 class="card-title px-3 fs-6">{{ card.title }}</h3>
+              <p class="card-text px-4 mt-3">{{ card.description }}</p>
             </div>
+            <div class="pb-2">
+              <p class="price">{{ card.price }}</p>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
+  </div>
 </template>
 
 <script>

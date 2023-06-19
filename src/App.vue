@@ -166,13 +166,13 @@ main {
 .lihat {
   margin: 0 auto;
   display: block;
-  width: 350px;
+  width: 250px;
   text-align: center;
-  padding: 15px 40px;
+  padding: 5px 10px;
   background-color: var(--primary-color);
   color: white;
   text-decoration: none;
-  font-size: 24px;
+  font-size: 18px;
   font-weight: 700;
   border-radius: 20px;
   box-shadow: 0px 4px 15px 2px rgba(0, 0, 0, 0.25);

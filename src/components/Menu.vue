@@ -1,49 +1,55 @@
 <template>
-    <div class="container">
-      <div class="row">
-        <div class="d-flex justify-content-around align-items-center flex-wrap mb-5">
-          <div class="col-lg-4 mt-5" v-for="card in cards" :key="card.id">
-            <div class="card-menu">
-              <img :src="card.image" class="card-img-top" alt="Card Image">
-              <div class="card-body mt-5">
-                <h3 class="card-title px-4 fs-2">{{ card.title }}</h3>
-                <p class="card-text px-4 mt-5 fs-5">{{ card.description }}</p>
-              </div>
-              <div class="pb-2">
-                <p class="price">{{ card.price }}</p>
-              </div>
+  <div class="container">
+    <div class="row">
+      <div class="d-flex justify-content-around align-items-center flex-wrap mb-2">
+        <div class="col-lg-4 mt-5" v-for="card in cards" :key="card.id">
+          <div class="card-menu">
+            <img :src="card.image" class="card-img-top" alt="Card Image" >
+            <div class="card-body mt-3">
+              <h3 class="card-title px-3 fs-6">{{ card.title }}</h3>
+              <p class="card-text px-4 mt-3">{{ card.description }}</p>
+            </div>
+            <div class="pb-2">
+              <p class="price">{{ card.price }}</p>
             </div>
           </div>
         </div>
       </div>
     </div>
+  </div>
 </template>
    
 <style>
+.card-text {
+  font-size: small;
+}
+
 .headline-2 {
-  padding-top: 100px;
+  padding-top: 50px;
   font-size: 62px;
   font-weight: 700;
   text-align: center;
 }
 
 .card-body {
-  height: 265px;
+  height: 150px;
 }
+
 
 .card-menu {
   box-shadow: 0px 4px 10px rgba(128, 109, 97, 0.5);
-  border-radius: 30px 10px 0px 0px;
-  width: 400px;
+  border-radius: 20px 5px 0px 0px;
+  width: 240px;
+  margin: auto;
 }
 
 
 .price {
   border-radius: 0px 20px 0px 0px;
-  font-size: 20px;
+  font-size: 13px;
   color: white;
   font-weight: bold;
-  padding: 10px 40px;
+  padding: 13px 30px;
   display: inline;
   background-color: var(--primary-color);
   margin-bottom: 100px;
