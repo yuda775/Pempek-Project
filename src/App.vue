@@ -22,41 +22,43 @@ function toggleExpand() {
   <header>
     <Navbar />
   </header>
+ 
   <main>
-
     <section id="beranda">
-      <div class="position-relative overflow-x-hidden">
-        <div class="container">
-          <div class="jumbotron row align-items-center z-2">
-            <div class="title col-lg-6">
+      <div class="position-relative">
+        <div class="container jumbotron position-relative z-1">
+          <div class="d-flex flex-wrap  align-items-center justify-content-between">
+            <div class="title" style="filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.25));">
               <h1 class="headline-1">Cari Makanan Tradisional <br> Palembang ?</h1>
               <p class="lead">Pempek Princess jawabannya, Asli <br> buatan orang Palembang</p>
               <a class="link" href="#menu">View Our Menu</a>
             </div>
-            <div class="col-lg-6 mt-5" style="filter: drop-shadow(2px 2px 70px rgba(0, 0, 0, 0.25));">
-              <img src="src/assets/images/PempekJumbotron.png" alt="">
+            <div class="mt-5" style="filter: drop-shadow(2px 2px 10px rgba(0, 0, 0, 0.25));">
+              <img class="large-image d-block mx-auto" src="src/assets/images/PempekJumbotron.png">
             </div>
           </div>
         </div>
-        <div class="vector-jumbotron">
+        <div class="vector-jumbotron position-absolute z-0">
           <WavesJumbotron />
         </div>
+      </div>        
+      <div class="market d-flex justify-content-evenly flex-wrap">
+        <Marketplace marketplaceImage="src/assets/images/marketplace/tokopedia.png" />
+        <Marketplace marketplaceImage="src/assets/images/marketplace/gofood.png" marketplaceLink="https://gofood.co.id/bandung/restaurant/pempek-princess-cangkuang-4bb1e789-67ba-4c7c-9445-66f1eefa239e"/>
+        <Marketplace marketplaceImage="src/assets/images/marketplace/shopee.png" marketplaceLink="https://shopee.co.id/pempekprincess"/>
+        <Marketplace marketplaceImage="src/assets/images/marketplace/shopee-food.png" />
       </div>
-    </section>
-
-    <section class="marketplace">
-      <Marketplace />
-    </section>
-
+    </section>  
+    
     <section id="tentang-kami">
       <div class="position-relative">
         <div class="container position-relative z-1">
           <h2 class="headline-2">Tentang-kami</h2>
           <div class="line"></div>
-          <div class="row align-items-center tentangKami-content mt-5">
-            <img class="col-lg-5 tentang-kami-img" src="src/assets/images/PempekJumbotron.png"
+          <div class="d-flex flex-wrap align-items-center justify-content-evenly tentangKami-content mt-5">
+            <img class="col-lg-4" src="src/assets/images/PempekJumbotron.png"
               style="filter: drop-shadow(2px 2px 70px rgba(0, 0, 0, 0.25));">
-            <div class="col-lg-7 description-tentang-kami lh-lg  px-5" style="text-indent: 45px;">
+            <div class="col-lg-8 description-tentang-kami lh-lg  px-5" style="text-indent: 45px;">
               <p class="fs-6">
                 Kami adalah sebuah usaha mikro, kecil, dan menengah (UMKM) yang berfokus pada penjualan produk pempek
                 buatan rumah. Dengan bangga, kami menghadirkan pempek asli buatan orang Palembang, yang memiliki cita rasa
@@ -122,11 +124,11 @@ function toggleExpand() {
       </div>
     </section>
     
-      <section class="maps">
-        <iframe width="100%" height="100%" id="gmap_canvas"
-          src="https://maps.google.com/maps?q=-7.052070,107.543132&t=&z=10&ie=UTF8&iwloc=&output=embed" frameborder="0"
-          scrolling="no" marginheight="0" marginwidth="0"></iframe>
-      </section>    
+    <section class="maps">
+      <iframe width="100%" height="100%" id="gmap_canvas"
+        src="https://maps.google.com/maps?q=-7.052070,107.543132&t=&z=10&ie=UTF8&iwloc=&output=embed" frameborder="0"
+        scrolling="no" marginheight="0" marginwidth="0"></iframe>
+    </section>    
 
     <section id="Footer">
       <Footer />
@@ -136,9 +138,14 @@ function toggleExpand() {
 
 <style scoped>
 main {
-  height: 20000px;
+  overflow: hidden;
 }
-
+.market {
+  margin-top: 70px;
+}
+.large-image {
+  width: 450px;
+}
 .vector-tentang-kami {
   top: 0px;
   left: 0px;
@@ -185,14 +192,6 @@ main {
   background-color: var(--primary-color);
 }
 
-.jumbotron {
-  position: relative;
-  padding-top: 100px;
-  padding-bottom: 200px;
-  justify-content: space-evenly;
-  z-index: 1;
-}
-
 .link {
   padding: 10px 25px;
   background-color: var(--primary-color);
@@ -201,34 +200,22 @@ main {
   font-weight: 700;
   border-radius: 20px;
 }
-
-.vector-jumbotron {
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  z-index: 0;
+.jumbotron {
+  padding-top: 100px;
 }
-
-.vector-left {
-  position: absolute;
-  top: 3690px;
-  left: 400px;
-}
-
-.vector-right {
-  position: absolute;
-  top: 3920px;
-  right: 400px;
+.vector-jumbotron {  
+  top: 0px;  
+  right: 0px;  
 }
 
 .maps {
   margin-top: 200px;
   width: 100%;
-  height: 550px;
+  height: 550px;  
 }
 
 
-@media (max-width: 767.98px) {
+@media (max-width: 992px){
   .headline-1 {
     font-size: 32px;
     border-left: 5px solid var(--primary-color);
@@ -249,20 +236,19 @@ main {
   .link {
     font-size: 12px;
   }
-
-  .vector-jumbotron {
-    position: absolute;
-    top: 80px;
-    right: -450px;
+  .jumbotron {
+    padding-top: 100px;    
   }
-
+  .vector-jumbotron {  
+    top: 120px;  
+    right: -300px;      
+  }
+  .market {
+    margin-top: 80px;
+  }
   .vector-tentang-kami {
     top: 0px;
-    left: -180px;
-  }
-
-  .tentang-kami-img {
-    width: 80%;
+    left: -160px;
   }
 
   .description-tentang-kami {

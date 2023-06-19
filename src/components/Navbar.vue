@@ -63,7 +63,7 @@ export default {
 <style>
 .navbar {
   font-family: var(--primary-font-family);  
-  height: 60px;
+  height: 7-px;
 }
 
 .nav-link {
