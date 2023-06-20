@@ -14,14 +14,12 @@
           <a class="nav-link" :class="{ 'active': activeSection === 'menu' }" href="#menu">Menu</a>
         </div>
         <div class="button" :class="{ 'scrolled': isScrolled }">
-          <a class="fw-bold" href="#kontak">Kontak</a>
+          <a class="fw-bold" href="https://api.whatsapp.com/message/23Z4KIC2KKJXA1?autoload=1&app_absent=0">Kontak</a>
         </div>
       </div>
     </div>
   </nav>
 </template>
-
-
 
 <script>
 export default {
@@ -62,8 +60,7 @@ export default {
 
 <style>
 .navbar {
-  font-family: var(--primary-font-family);  
-  height: 7-px;
+  font-family: var(--primary-font-family);
 }
 
 .nav-link {
@@ -91,21 +88,28 @@ export default {
 }
 
 .button a:hover {
-  color: var(--primary-color);
+  color: white;
   background-color: transparent;
-  border: 3px solid var(--primary-color);
-  padding: 8px 28px;
+  border: 2px solid white;
+  padding: 3px 28px;
+  /* Ubah padding sesuai dengan ukuran awal */
 }
 
 /* Perubahan untuk tampilan mobile */
 @media (max-width: 992px) {
-  .navbar {
+
+  .navbar,
+  .collapse .navbar-collapse {
     background-color: #FFFFFF;
   }
 
   .navbar-nav {
     flex-direction: column;
     align-items: center;
+  }
+
+  .navbar-brand {
+    width: 100px;
   }
 
   .navbar-nav .nav-link {
@@ -125,7 +129,7 @@ export default {
   .button a:hover {
     color: var(--primary-color);
     background-color: transparent;
-    border: 3px solid var(--primary-color);
+    border: 2px solid var(--primary-color);
   }
 }
 
@@ -148,6 +152,15 @@ export default {
 
 .button.scrolled a {
   color: #FFFFFF;
-  background-color: var(--primary-color); /* Ubah warna background sesuai kebutuhan */
+  background-color: var(--primary-color);
+  /* Ubah warna background sesuai kebutuhan */  
 }
+
+.scrolled .button a:hover {
+  color: var(--primary-color);
+  background-color: transparent;
+  border: 2px solid var(--primary-color);
+  padding: 2px 28px; /* Ubah padding sesuai dengan ukuran awal */
+}
+
 </style>

@@ -1,20 +1,26 @@
 <template>
-  <div class="text-center testimonial">
-    <div class="profile-photo my-4">
-      <img :src="profilePhoto" class="rounded-circle">
-    </div>
-    <div class="username-testimonial">
-      <h4 class="headline-3 fw-bold">{{ username }}</h4>
-    </div>
-    <hr class="m-4">
-    <div class="rating-testimonial">
-      <span class="rating-icon" v-for="n in rating" :key="n">&#9733;</span>
-    </div>
-    <div class="description-testimonial">
-      <p class="mt-3 px-4">{{ description }}</p>
+  <div class="testimonial">
+    <div class="d-flex align-items-stretch justify-content-around">
+      <div class="col-4">
+        <div class="profile-photo">
+          <img :src="profilePhoto" class="rounded-circle">
+          <div class="username-testimonial pt-3">
+            <h4 class="headline-3 fw-bold text-center">{{ username }}</h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-7">
+        <div class="description-testimonial">
+          <p class="mt-3">{{ description }}</p>
+        </div>
+        <div class="rating-testimonial">
+          <span class="rating-icon" v-for="n in rating" :key="n">&#9733;</span>
+        </div>
+      </div>
     </div>
   </div>
 </template>
+
 
 <script>
 export default {
@@ -41,28 +47,28 @@ export default {
 
 <style scoped>
 .testimonial {
-  width: 350px;
+  padding: 10px;
   border-radius: 10px;
-  border-top: 10px solid gold;  
+  border: 2px solid var(--secondary-color);
 }
 
 .profile-photo img {
   margin: auto;
   width: 150px;
-}
-
-.profile-photo {
-  height: 140px;
-}
-
-.rating-testimonial {
-  margin-top: 10px;
+  /* Ubah ukuran gambar sesuai kebutuhan */
 }
 
 .rating-icon {
   font-size: 24px;
-  color: gold;
+  color: var(--secondary-color);
 }
 
-@media (max-width: 768px) {}
+@media (max-width: 768px) {
+  .description-testimonial {
+    font-size: 12px;
+  }
+  .headline-3 {
+    font-size: 16px;
+  }
+}
 </style>

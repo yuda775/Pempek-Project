@@ -9,8 +9,8 @@
 
 <style>
 .marketplace {
-  width: 100px;
-  height: 100px;
+  width: 5rem;
+  height: 5rem;
   background-color: white;
   padding: 13px;
   border-radius: 50%;
@@ -25,8 +25,8 @@
 
 @media (max-width: 992px){
   .marketplace {
-    width: 80px;
-    height: 80px;
+    width: 4rem;
+    height: 4rem;
   }
 }
 </style>
