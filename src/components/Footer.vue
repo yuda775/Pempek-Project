@@ -3,7 +3,7 @@
     <div class="footer-content text-center position-relative">
         <div class=" position-relative z-1">
             <div class="logo-container">
-                <img class="logo d-block mx-auto" src="./icons/pempek.png" alt="brand-logo" width="125">
+                <img class="logo d-block mx-auto" src="../assets/images/pempek.png" alt="brand-logo" width="125">
             </div>
             <div class="address d-flex justify-content-center ">
                 <p class="fw-bold w-75">Cangkuang Road, Nagrak, Kec. Cangkuang, Kabupaten Bandung, Jawa Barat 40238</p>

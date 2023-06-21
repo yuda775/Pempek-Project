@@ -1,5 +1,4 @@
 <script setup>
-import Navbar from './components/Navbar.vue';
 import Marketplace from './components/Marketplace.vue';
 import TestimoniCardLarge from './components/TestimoniCardLarge.vue';
 import WavesJumbotron from './components/icons/WavesJumbotron.vue';
@@ -10,18 +9,71 @@ import MenuExpand from './components/MenuExpand.vue';
 import Sertifikat from './components/Sertifikat.vue';
 
 
-import { ref } from 'vue'
+import { ref, onMounted, onUnmounted } from 'vue';
 
+
+// ==== Popup Sertifikat =====
 const expand = ref(false)
 function toggleExpand() {
   expand.value = !expand.value
 }
+
+
+// ==== Navbar ====
+const activeSection = ref('beranda');
+const isScrolled = ref(false);
+
+const setActiveSection = (section) => {
+  activeSection.value = section;
+};
+
+const handleScroll = () => {
+  isScrolled.value = window.scrollY > 0;
+    const scrollPosition = window.scrollY;
+    // Cek posisi scroll dan perbarui item navbar yang aktif
+    if (scrollPosition >= 0 && scrollPosition < 500) {
+      activeSection.value = 'beranda';
+    } else if (scrollPosition >= 500 && scrollPosition < 1000) {
+      activeSection.value = 'tentang-kami';
+    } else if (scrollPosition >= 1000) {
+      activeSection.value = 'menu';
+    }
+};
+
+onMounted(() => {
+  window.addEventListener('scroll', handleScroll);
+});
+
+// Membersihkan event listener saat komponen di-unmount
+onUnmounted(() => {
+  window.removeEventListener('scroll', handleScroll);
+});
+
+
 </script>
 
 
 <template>
   <header>
-    <Navbar />
+      <nav class="navbar navbar-expand-lg fixed-top" :class="{ 'scrolled': isScrolled }">
+        <div class="container">
+          <a class="navbar-brand" href="#"><img src="src/assets/images/pempek.png" alt="brand-logo" width="125"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav mx-auto">
+              <a class="nav-link" :class="{ 'active': activeSection === 'beranda' }" @click="setActiveSection('beranda')" href="#beranda">Beranda</a>
+              <a class="nav-link" :class="{ 'active': activeSection === 'tentang-kami' }" @click="setActiveSection('tentang-kami')" href="#tentang-kami">Tentang Kami</a>
+              <a class="nav-link" :class="{ 'active': activeSection === 'menu' }" @click="setActiveSection('menu')" href="#menu">Menu</a>
+            </div>
+            <div class="button" :class="{ 'scrolled': isScrolled }">
+              <a class="fw-bold" href="https://api.whatsapp.com/message/23Z4KIC2KKJXA1?autoload=1&app_absent=0">Kontak</a>
+            </div>
+          </div>
+        </div>
+      </nav>
   </header>
 
   <main>
@@ -47,14 +99,14 @@ function toggleExpand() {
         <div class="market d-flex justify-content-evenly flex-wrap">
           <Marketplace marketplaceImage="src/assets/images/marketplace/tokopedia.png" />
           <Marketplace marketplaceImage="src/assets/images/marketplace/gofood.png"
-          marketplaceLink="https://gofood.co.id/bandung/restaurant/pempek-princess-cangkuang-4bb1e789-67ba-4c7c-9445-66f1eefa239e" />
+            marketplaceLink="https://gofood.co.id/bandung/restaurant/pempek-princess-cangkuang-4bb1e789-67ba-4c7c-9445-66f1eefa239e" />
           <Marketplace marketplaceImage="src/assets/images/marketplace/shopee.png"
-          marketplaceLink="https://shopee.co.id/pempekprincess" />
+            marketplaceLink="https://shopee.co.id/pempekprincess" />
           <Marketplace marketplaceImage="src/assets/images/marketplace/shopee-food.png" />
         </div>
       </div>
     </section>
-      
+
     <section id="tentang-kami">
       <div class="position-relative py-5 mt-5">
         <div class="container position-relative z-1">
@@ -86,10 +138,10 @@ function toggleExpand() {
             <Sertifikat />
           </div>
         </div>
+        <div>
+        </div>
         <div class="vector-tentang-kami position-absolute z-0">
           <VectorTentangKami />
-        </div>
-        <div>
         </div>
       </div>
     </section>
@@ -155,9 +207,80 @@ function toggleExpand() {
 main {
   overflow: hidden;
 }
+
+/* Navbar */
+  .navbar {
+    font-family: var(--primary-font-family);
+  }
+
+  .nav-link {
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+    min-width: 125px;
+    text-align: center;
+    font-weight: 600;
+  }
+
+  .button a {
+    font-size: 18px;
+    color: var(--primary-color);
+    background-color: #FFFFFF;
+    padding: 5px 30px;
+    border-radius: 2px;
+    text-decoration: none;
+    transition: background-color 0.8s;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 100px;
+  }
+
+  .nav-link:hover {
+    color: var(--primary-color);
+    font-weight: bold;
+  }
+
+  .button a:hover {
+    color: white;
+    background-color: transparent;
+    border: 2px solid white;
+    padding: 3px 28px;
+    /* Ubah padding sesuai dengan ukuran awal */
+  }
+
+
+  /* Gaya untuk navbar dengan background putih saat scroll */
+  .scrolled {
+    background-color: #FFFFFF;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Gaya untuk navbar-link yang sedang aktif (kuning) */
+  .navbar .nav-link.active {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+  }
+
+  /* Gaya untuk navbar-link saat dihover (bold) */
+  .navbar .nav-link:hover {
+    font-weight: bold;
+  }
+
+  .button.scrolled a {
+    color: #FFFFFF;
+    background-color: var(--primary-color);
+    /* Ubah warna background sesuai kebutuhan */  
+  }
+
+  .scrolled .button a:hover {
+    color: var(--primary-color);
+    background-color: transparent;
+    border: 2px solid var(--primary-color);
+    padding: 2px 28px; /* Ubah padding sesuai dengan ukuran awal */
+  }
+/* Akhir Navbar */
+
 .market {
   padding-top: 6rem;
 }
+
 .vector-tentang-kami {
   top: 0px;
   left: 0px;
@@ -230,9 +353,43 @@ main {
 
 
 @media (max-width: 992px) {
+    .navbar,
+    .collapse .navbar-collapse {
+      background-color: #FFFFFF;
+    }
+
+    .navbar-nav {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .navbar-brand {
+      width: 100px;
+    }
+
+    .navbar-nav .nav-link {
+      margin: 0.5rem 0;
+    }
+
+    .button {
+      text-align: center;
+      margin: 2rem;
+    }
+
+    .button a {
+      color: #FFFFFF;
+      background-color: var(--primary-color);
+    }
+
+    .button a:hover {
+      color: var(--primary-color);
+      background-color: transparent;
+      border: 2px solid var(--primary-color);
+    }
   .market {
     padding-top: 2rem;
   }
+
   .headline-1 {
     font-size: 32px;
     border-left: 5px solid var(--primary-color);
