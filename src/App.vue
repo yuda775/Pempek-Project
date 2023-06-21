@@ -1,45 +1,77 @@
+<script setup>
+import Navbar from './components/Navbar.vue';
+import Marketplace from './components/Marketplace.vue';
+import TestimoniCardLarge from './components/TestimoniCardLarge.vue';
+import WavesJumbotron from './components/icons/WavesJumbotron.vue';
+import VectorTentangKami from './components/icons/tentang-kami.vue';
+import Footer from './components/Footer.vue';
+import Menu from './components/Menu.vue';
+import MenuExpand from './components/MenuExpand.vue';
+import Sertifikat from './components/Sertifikat.vue';
+
+
+import { ref } from 'vue'
+
+const expand = ref(false)
+function toggleExpand() {
+  expand.value = !expand.value
+}
+</script>
+
+
 <template>
   <header>
     <Navbar />
   </header>
-  <main>
 
+  <main>
     <section id="beranda">
-      <div class="position-relative overflow-x-hidden">
-        <div class="container">
-          <div class="jumbotron row align-items-center z-2">
-            <div class="title col-lg-6">
-              <h1 class="headline-1">Cari Makanan Tradisional <br> Palembang ?</h1>
+      <div class="position-relative jumbotron">
+        <div class="container position-relative z-1">
+          <div class="row jumbotron-content">
+            <div class="col-lg-7 pb-5" style="filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.25));">
+              <h1 class="headline-1 fw-bold">Cari Makanan Tradisional <br> Palembang ?</h1>
               <p class="lead">Pempek Princess jawabannya, Asli <br> buatan orang Palembang</p>
               <a class="link" href="#menu">View Our Menu</a>
             </div>
-            <div class="col-lg-6 mt-5" style="filter: drop-shadow(2px 2px 70px rgba(0, 0, 0, 0.25));">
-              <img src="src/assets/images/PempekJumbotron.png" alt="">
+            <div class="col-lg-5" style="filter: drop-shadow(2px 2px 10px rgba(0, 0, 0, 0.25));">
+              <img class="d-block mx-auto" src="src/assets/images/PempekJumbotron.png" width="80%">
             </div>
           </div>
         </div>
-        <div class="vector-jumbotron">
+        <div class="vector-jumbotron position-absolute z-0">
           <WavesJumbotron />
         </div>
       </div>
+      <div class="container">
+        <div class="market d-flex justify-content-evenly flex-wrap">
+          <Marketplace marketplaceImage="src/assets/images/marketplace/tokopedia.png" />
+          <Marketplace marketplaceImage="src/assets/images/marketplace/gofood.png"
+          marketplaceLink="https://gofood.co.id/bandung/restaurant/pempek-princess-cangkuang-4bb1e789-67ba-4c7c-9445-66f1eefa239e" />
+          <Marketplace marketplaceImage="src/assets/images/marketplace/shopee.png"
+          marketplaceLink="https://shopee.co.id/pempekprincess" />
+          <Marketplace marketplaceImage="src/assets/images/marketplace/shopee-food.png" />
+        </div>
+      </div>
     </section>
-
-    <Marketplace />
+      
     <section id="tentang-kami">
-      <div class="position-relative">
+      <div class="position-relative py-5 mt-5">
         <div class="container position-relative z-1">
-          <h2 class="headline-2">Tentang-kami</h2>
+          <h2 class="headline-2 pt-5">Tentang-kami</h2>
           <div class="line"></div>
-          <div class="row align-items-center tentangKami-content mt-5">
-            <img class="col-lg-5 tentang-kami-img" src="src/assets/images/PempekJumbotron.png"
-              style="filter: drop-shadow(2px 2px 70px rgba(0, 0, 0, 0.25));">
-            <div class="col-lg-7 description-tentang-kami lh-lg  px-5" style="text-indent: 45px;">
-              <p class="fs-6">
+          <div class="d-flex flex-wrap align-items-center justify-content-evenly tentangKami-content mt-5">
+            <div class="col-lg-4">
+              <img src="src/components/icons/pempek 1.png" style="filter: drop-shadow(2px 2px 70px rgba(0, 0, 0, 0.25));">
+            </div>
+
+            <div class="col-lg-8 description-tentang-kami lh-lg  px-5" style="text-indent: 45px;">
+              <p class="lh-base">
                 Kami adalah sebuah usaha mikro, kecil, dan menengah (UMKM) yang berfokus pada penjualan produk pempek
                 buatan rumah. Dengan bangga, kami menghadirkan pempek asli buatan orang Palembang, yang memiliki cita rasa
                 autentik dan kualitas terbaik.
               </p>
-              <p class="fs-6">
+              <p class="lh-base">
                 Dalam lingkungan bisnis yang kompetitif saat ini, kami memahami pentingnya mempertahankan keaslian kuliner
                 tradisional.
                 Oleh karena itu, kami mengambil tanggung jawab untuk memproduksi dan menjual pempek dengan resep
@@ -50,45 +82,52 @@
               </p>
             </div>
           </div>
+          <div class="pb-5 d-flex justify-content-center">
+            <Sertifikat />
+          </div>
         </div>
         <div class="vector-tentang-kami position-absolute z-0">
           <VectorTentangKami />
         </div>
+        <div>
+        </div>
       </div>
     </section>
 
-    <section id="menu">
-    <h2 class="headline-2">All Menu</h2>
-    <div class="line"></div>
-    <Menu />
-    <div v-if="showMenuExpand" class="MenuExpand">
-      <MenuExpand />
-    </div>
-    <button class="lihat mt-5" @click="toggleMenuExpand">
-      {{ showMenuExpand ? 'Tampilkan Lebih Sedikit' : 'Lihat Lebih Banyak' }}
-    </button>
-  </section>
+    <section id="menu" class="pb-5">
+      <h2 class="headline-2">All Menu</h2>
+      <div class="line"></div>
+      <Menu />
+      <div class="MenuExpand">
+        <MenuExpand v-if="expand" />
+      </div>
+      <div class="d-flex justify-content-center">
+        <button class="lihat btn mt-5 " @click="toggleExpand">
+          {{ expand ? 'Tampilkan Lebih Sedikit' : 'Lihat Lebih Banyak' }}
+        </button>
+      </div>
+    </section>
 
-    <section id="testimoni">
+    <section class="testimoni">
       <div class="container">
         <h2 class="mt-4 mb-3 text-center headline-2">Testimoni</h2>
         <div class="line"></div>
         <div class="row mt-5 align-items-stretch justify-content-around">
-          <div class="col-lg-4 col-md-6">
+          <div class="col-lg-6 p-2">
             <div class="d-flex justify-content-center">
               <TestimoniCardLarge profilePhoto="src/assets/images/profile/aldi.jpg" username="@john.doe"
                 description="Maaci umi kirimannya, ini pempek kates yang bisa dikirim ke jakarta yang isinyo aman dan masih seger. mantabb"
                 :rating="4" />
             </div>
           </div>
-          <div class="col-lg-4 col-md-6">
+          <div class="col-lg-6 p-2">
             <div class="d-flex justify-content-center">
               <TestimoniCardLarge profilePhoto="src/assets/images/profile/aldi.jpg" username="@jane.smith"
                 description="Alhamdulillah, Laksana nyo nyampe sebelum buko plus bonus talam ubi ungu, baik banget mevaah, mokaseh @pempek_princess. “maka nikmat Tuhan manalagi yg kau dusta”"
                 :rating="5" />
             </div>
           </div>
-          <div class="col-lg-4 col-md-6">
+          <div class="col-lg-6 p-2">
             <div class="d-flex justify-content-center">
               <TestimoniCardLarge profilePhoto="src/assets/images/profile/aldi.jpg" username="@alex.williams"
                 description="Pempek Princess, lezatnya sebuah pempek tak hanya memiliki cita rasa enak dilidah saja, tetapi juga perpaduan bumbu yang menggugah selera serta membuat ketagihan."
@@ -98,23 +137,131 @@
         </div>
       </div>
     </section>
-    <section>
-      <div class="maps">
-        <iframe width="100%" height="100%" id="gmap_canvas"
-          src="https://maps.google.com/maps?q=-7.052070,107.543132&t=&z=10&ie=UTF8&iwloc=&output=embed" frameborder="0"
-          scrolling="no" marginheight="0" marginwidth="0"></iframe>
-      </div>
+
+    <section class="maps">
+      <iframe width="100%" height="100%" id="gmap_canvas"
+        src="https://maps.google.com/maps?q=-7.052070,107.543132&t=&z=10&ie=UTF8&iwloc=&output=embed" frameborder="0"
+        scrolling="no" marginheight="0" marginwidth="0"></iframe>
     </section>
+
     <section id="Footer">
       <Footer />
     </section>
   </main>
 </template>
 
+
 <style scoped>
+<<<<<<< HEAD
 /* main {
   height: 20000px;
 } */
+=======
+main {
+  overflow: hidden;
+}
+.maps {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  height: 20rem;
+}
+.lihat {
+  background-color: var(--primary-color);
+  color: white;
+  font-weight: bold;
+}
+#beranda {
+  height: 86vh;
+}
+
+.jumbotron {
+  padding-top: 8rem;
+}
+
+.market {
+  margin-top: 8rem;
+}
+
+.headline-1 {
+  font-size: 42px;
+  border-left: 8px solid var(--primary-color);
+  padding-left: 12px;
+  color: var(--secondary-color);
+}
+
+.headline-2 {
+  font-size: 38px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.line {
+  margin: auto;
+  width: 100px;
+  height: 10px;
+  background-color: var(--primary-color);
+}
+
+.link {
+  padding: 10px 25px;
+  background-color: var(--primary-color);
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 20px;
+}
+
+
+.vector-jumbotron {
+  top: 0;
+  right: 0;
+}
+
+.vector-tentang-kami {
+  top: 0;
+  left: 0;
+}
+
+/* Tampilan Mobile */
+@media (max-width: 991.98px) {
+  .headline-1 {
+    font-size: 28px;
+  }
+
+  .headline-2 {
+    font-size: 32px;
+  }
+
+  .vector-jumbotron {
+    top: 15rem;
+    right: -19rem;
+  }
+
+  .vector-tentang-kami {
+    top: 0;
+    left: -180px;
+  }
+
+  .market {
+    margin-top: 4rem;
+  }
+
+}
+</style>
+
+<!-- <style scoped>
+main {
+  overflow: hidden;
+}
+
+.market {
+  margin-top: 70px;
+}
+
+.large-image {
+  width: 400px;
+}
+>>>>>>> 098aeb64b0614ee765b4a8808f1d5bbb3412cb4c
 
 .vector-tentang-kami {
   top: 0px;
@@ -143,13 +290,13 @@
 .lihat {
   margin: 0 auto;
   display: block;
-  width: 350px;
+  width: 250px;
   text-align: center;
-  padding: 15px 40px;
+  padding: 5px 10px;
   background-color: var(--primary-color);
   color: white;
   text-decoration: none;
-  font-size: 24px;
+  font-size: 18px;
   font-weight: 700;
   border-radius: 20px;
   box-shadow: 0px 4px 15px 2px rgba(0, 0, 0, 0.25);
@@ -162,14 +309,6 @@
   background-color: var(--primary-color);
 }
 
-.jumbotron {
-  position: relative;
-  padding-top: 100px;
-  padding-bottom: 200px;
-  justify-content: space-evenly;
-  z-index: 1;
-}
-
 .link {
   padding: 10px 25px;
   background-color: var(--primary-color);
@@ -179,23 +318,13 @@
   border-radius: 20px;
 }
 
+.jumbotron {
+  padding-top: 100px;
+}
+
 .vector-jumbotron {
-  position: absolute;
   top: 0px;
   right: 0px;
-  z-index: 0;
-}
-
-.vector-left {
-  position: absolute;
-  top: 3690px;
-  left: 400px;
-}
-
-.vector-right {
-  position: absolute;
-  top: 3920px;
-  right: 400px;
 }
 
 .maps {
@@ -205,7 +334,7 @@
 }
 
 
-@media (max-width: 767.98px) {
+@media (max-width: 992px) {
   .headline-1 {
     font-size: 32px;
     border-left: 5px solid var(--primary-color);
@@ -227,56 +356,25 @@
     font-size: 12px;
   }
 
+  .jumbotron {
+    padding-top: 100px;
+  }
+
   .vector-jumbotron {
-    position: absolute;
-    top: 80px;
-    right: -450px;
+    top: 120px;
+    right: -300px;
+  }
+
+  .market {
+    margin-top: 70px;
   }
 
   .vector-tentang-kami {
     top: 0px;
-    left: -180px;
-  }
-
-  .tentang-kami-img {
-    width: 80%;
+    left: -160px;
   }
 
   .description-tentang-kami {
     margin-top: 25px;
   }
-}
-</style>
-
-
-<script setup>
-import Navbar from './components/Navbar.vue';
-import Marketplace from './components/Marketplace.vue';
-import TestimoniCardLarge from './components/TestimoniCardLarge.vue';
-import WavesJumbotron from './components/icons/WavesJumbotron.vue';
-import VectorTentangKami from './components/icons/tentang-kami.vue';
-import Footer from './components/Footer.vue';
-import Menu from './components/Menu.vue';
-import MenuExpand from './components/MenuExpand.vue';
-
-
-</script>
-
-<script>
-import { ref } from 'vue';
-
-export default {
-  setup() {
-    const showMenuExpand = ref(false);
-
-    const toggleMenuExpand = () => {
-      showMenuExpand.value = !showMenuExpand.value;
-    };
-
-    return {
-      showMenuExpand,
-      toggleMenuExpand
-    };
-  }
-};
-</script>
+}</style> -->
