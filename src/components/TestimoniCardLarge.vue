@@ -60,7 +60,7 @@ export default {
 
 .rating-icon {
   font-size: 24px;
-  color: var(--secondary-color);
+  color: var(--primary-color);
 }
 
 @media (max-width: 768px) {

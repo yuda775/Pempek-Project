@@ -152,117 +152,9 @@ function toggleExpand() {
 
 
 <style scoped>
-<<<<<<< HEAD
-/* main {
-  height: 20000px;
-} */
-=======
 main {
   overflow: hidden;
 }
-.maps {
-  margin-top: 100px;
-  margin-bottom: 100px;
-  height: 20rem;
-}
-.lihat {
-  background-color: var(--primary-color);
-  color: white;
-  font-weight: bold;
-}
-#beranda {
-  height: 86vh;
-}
-
-.jumbotron {
-  padding-top: 8rem;
-}
-
-.market {
-  margin-top: 8rem;
-}
-
-.headline-1 {
-  font-size: 42px;
-  border-left: 8px solid var(--primary-color);
-  padding-left: 12px;
-  color: var(--secondary-color);
-}
-
-.headline-2 {
-  font-size: 38px;
-  text-align: center;
-  font-weight: bold;
-}
-
-.line {
-  margin: auto;
-  width: 100px;
-  height: 10px;
-  background-color: var(--primary-color);
-}
-
-.link {
-  padding: 10px 25px;
-  background-color: var(--primary-color);
-  color: white;
-  text-decoration: none;
-  font-weight: 700;
-  border-radius: 20px;
-}
-
-
-.vector-jumbotron {
-  top: 0;
-  right: 0;
-}
-
-.vector-tentang-kami {
-  top: 0;
-  left: 0;
-}
-
-/* Tampilan Mobile */
-@media (max-width: 991.98px) {
-  .headline-1 {
-    font-size: 28px;
-  }
-
-  .headline-2 {
-    font-size: 32px;
-  }
-
-  .vector-jumbotron {
-    top: 15rem;
-    right: -19rem;
-  }
-
-  .vector-tentang-kami {
-    top: 0;
-    left: -180px;
-  }
-
-  .market {
-    margin-top: 4rem;
-  }
-
-}
-</style>
-
-<!-- <style scoped>
-main {
-  overflow: hidden;
-}
-
-.market {
-  margin-top: 70px;
-}
-
-.large-image {
-  width: 400px;
-}
->>>>>>> 098aeb64b0614ee765b4a8808f1d5bbb3412cb4c
-
 .vector-tentang-kami {
   top: 0px;
   left: 0px;
@@ -377,4 +269,4 @@ main {
   .description-tentang-kami {
     margin-top: 25px;
   }
-}</style> -->
+}</style>
