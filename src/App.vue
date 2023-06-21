@@ -155,6 +155,9 @@ function toggleExpand() {
 main {
   overflow: hidden;
 }
+.market {
+  padding-top: 6rem;
+}
 .vector-tentang-kami {
   top: 0px;
   left: 0px;
@@ -215,7 +218,7 @@ main {
 }
 
 .vector-jumbotron {
-  top: 0px;
+  top: -50px;
   right: 0px;
 }
 
@@ -227,6 +230,9 @@ main {
 
 
 @media (max-width: 992px) {
+  .market {
+    padding-top: 2rem;
+  }
   .headline-1 {
     font-size: 32px;
     border-left: 5px solid var(--primary-color);
