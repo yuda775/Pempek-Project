@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row">
       <div class="d-flex flex-wrap justify-content-evenly align-items-center flex-wrap mb-2">
-        <div class="col-lg-3 col-md-6 col-sm-12 mt-5" v-for="card in cards" :key="card.id">
+        <div class="col-lg-3 col-md-4 col-sm-4 mt-5" v-for="card in cards" :key="card.id">
           <div class="card-menu">
             <img :src="card.image" class="card-img-top" alt="Card Image">
             <div class="card-body mt-3">
@@ -134,16 +134,16 @@ export default {
         },
         {
           id: 7,
-          title: 'Pempek Pistel Dos',
-          description: 'Adonan yang sama dengan lenjer namun dibentuk seperti pastel dan memiliki isan pepaya muda.',
-          image: 'src/assets/images/pempekdos.png',
+          title: 'Pempek Otak-otak',
+          description: 'Pempek Otak-otak yang dibungkus dengan daun pisang, memiliki bentuk lonjong dapat dipadukan dengan cuko merah.',
+          image: 'src/assets/images/otakotak.png',
           price: 'Rp.15.000 / porsi'
         },
         {
           id: 8,
-          title: 'Pempek Pistel Dos',
-          description: 'Adonan yang sama dengan lenjer namun dibentuk seperti pastel dan memiliki isan pepaya muda.',
-          image: 'src/assets/images/pempekdos.png',
+          title: 'Pempek Tekwan',
+          description: 'Tekwan merupakan varian dari pempek, berbahan dasar dari sagu dan ikan tersebut. Biasanya diberi tambahan jamur kuping',
+          image: 'src/assets/images/tekwan.png',
           price: 'Rp.15.000 / porsi'
         },
 

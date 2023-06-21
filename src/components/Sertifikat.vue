@@ -54,7 +54,7 @@ export default {
   color: white;
 }
 .tombol-halal:hover {
-  background-color: var(--secondary-color);
+  background-color: #f5f5f5;
   color: var(--primary-color);
   font-weight: bold;
 }
