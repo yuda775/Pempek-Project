@@ -57,7 +57,7 @@ onUnmounted(() => {
   <header>
       <nav class="navbar navbar-expand-lg fixed-top" :class="{ 'scrolled': isScrolled }">
         <div class="container">
-          <a class="navbar-brand" href="#"><img src="src/assets/images/pempek.png" alt="brand-logo" width="125"></a>
+          <a class="navbar-brand" href="#"><img :src="require('@/assets/images/pempek.png')" alt="brand-logo" width="125"></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
             aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -87,7 +87,7 @@ onUnmounted(() => {
               <a class="link" href="#menu">View Our Menu</a>
             </div>
             <div class="col-lg-5" style="filter: drop-shadow(2px 2px 10px rgba(0, 0, 0, 0.25));">
-              <img class="d-block mx-auto" src="src/assets/images/PempekJumbotron.png" width="80%">
+              <img class="d-block mx-auto" :src="require('@/assets/images/PempekJumbotron.png')" width="80%">
             </div>
           </div>
         </div>
@@ -114,7 +114,7 @@ onUnmounted(() => {
           <div class="line"></div>
           <div class="d-flex flex-wrap align-items-center justify-content-evenly tentangKami-content mt-5">
             <div class="col-lg-4">
-              <img src="src/components/icons/pempek 1.png" style="filter: drop-shadow(2px 2px 70px rgba(0, 0, 0, 0.25));">
+              <img :src="require('@/components/icons/pempek 1.png')" style="filter: drop-shadow(2px 2px 70px rgba(0, 0, 0, 0.25));">
             </div>
 
             <div class="col-lg-8 description-tentang-kami lh-lg  px-5" style="text-indent: 45px;">
