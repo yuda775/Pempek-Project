@@ -3,7 +3,7 @@
     <div class="footer-content text-center position-relative">
         <div class=" position-relative z-1">
             <div class="logo-container">
-                <img class="logo d-block mx-auto" src="../assets/images/pempek.png" alt="brand-logo" width="125">
+                <img class="logo d-block mx-auto" src="../assets/images/brand-logo.png" alt="brand-logo" width="125">
             </div>
             <div class="address d-flex justify-content-center ">
                 <p class="fw-bold w-75">Cangkuang Road, Nagrak, Kec. Cangkuang, Kabupaten Bandung, Jawa Barat 40238</p>
@@ -75,7 +75,6 @@ color: var(--primary-color);
   
 
 <script>
-import vectorfooter from './icons/vectorfooter.vue';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faFacebook, faTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons'
