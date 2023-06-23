@@ -1,11 +1,19 @@
 <template>
   <div class="marketplace d-flex justify-content-center align-items-center m-2">
     <a :href="marketplaceLink">
-      <img :src="marketplaceImage">
+      <img :src="`./src/assets/images/marketplace/${marketplaceImage}`">
     </a>
   </div>
 </template>
 
+<script setup>
+import { defineProps } from 'vue';
+
+const props = defineProps({
+  marketplaceImage: String,
+  marketplaceLink: String
+});
+</script>
 
 <style>
 .marketplace {
@@ -30,10 +38,3 @@
   }
 }
 </style>
-
-<script setup>
-  const props = defineProps({
-    marketplaceImage: String,
-    marketplaceLink: String
-  })
-</script>
