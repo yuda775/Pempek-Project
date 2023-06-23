@@ -170,21 +170,21 @@ onUnmounted(() => {
         <div class="row mt-5 align-items-stretch justify-content-around">
           <div class="col-lg-6 p-2">
             <div class="d-flex justify-content-center">
-              <TestimoniCardLarge profilePhoto="src/assets/images/profile/aldi.jpg" username="@john.doe"
+              <TestimoniCardLarge profilePhoto="../../profile/aldi.jpg" username="@john.doe"
                 description="Maaci umi kirimannya, ini pempek kates yang bisa dikirim ke jakarta yang isinyo aman dan masih seger. mantabb"
                 :rating="4" />
             </div>
           </div>
           <div class="col-lg-6 p-2">
             <div class="d-flex justify-content-center">
-              <TestimoniCardLarge profilePhoto="src/assets/images/profile/aldi.jpg" username="@jane.smith"
+              <TestimoniCardLarge profilePhoto="../../profile/aldi.jpg" username="@jane.smith"
                 description="Alhamdulillah, Laksana nyo nyampe sebelum buko plus bonus talam ubi ungu, baik banget mevaah, mokaseh @pempek_princess. “maka nikmat Tuhan manalagi yg kau dusta”"
                 :rating="5" />
             </div>
           </div>
           <div class="col-lg-6 p-2">
             <div class="d-flex justify-content-center">
-              <TestimoniCardLarge profilePhoto="src/assets/images/profile/aldi.jpg" username="@alex.williams"
+              <TestimoniCardLarge profilePhoto="../../profile/aldi.jpg" username="@alex.williams"
                 description="Pempek Princess, lezatnya sebuah pempek tak hanya memiliki cita rasa enak dilidah saja, tetapi juga perpaduan bumbu yang menggugah selera serta membuat ketagihan."
                 :rating="5" />
             </div>
