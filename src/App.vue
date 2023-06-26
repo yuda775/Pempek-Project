@@ -169,17 +169,17 @@ onUnmounted(() => {
         <div id="carouselExampleRide" class="carousel slide" data-bs-ride="true">
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <TestimoniCardLarge profilePhoto="../public/images/profile/aldi.jpg" username="@john.doe"
+              <TestimoniCardLarge profilePhoto="../../public/images/profile/aldi.jpg" username="@john.doe"
                 description="Maaci umi kirimannya, ini pempek kates yang bisa dikirim ke jakarta yang isinyo aman dan masih seger. mantabb"
                 :rating="4" />
             </div>
             <div class="carousel-item">
-              <TestimoniCardLarge profilePhoto="../public/images/profile/aldi.jpg" username="@jane.smith"
+              <TestimoniCardLarge profilePhoto="../../public/images/profile/aldi.jpg" username="@jane.smith"
                 description="Alhamdulillah, Laksana nyo nyampe sebelum buko plus bonus talam ubi ungu, baik banget mevaah, mokaseh @pempek_princess. “maka nikmat Tuhan manalagi yg kau dusta”"
                 :rating="5" />
             </div>
             <div class="carousel-item">
-              <TestimoniCardLarge profilePhoto="../public/images/profile/aldi.jpg" username="@alex.williams"
+              <TestimoniCardLarge profilePhoto="../../public/images/profile/aldi.jpg" username="@alex.williams"
                 description="Pempek Princess, lezatnya sebuah pempek tak hanya memiliki cita rasa enak dilidah saja, tetapi juga perpaduan bumbu yang menggugah selera serta membuat ketagihan."
                 :rating="5" />
             </div>
