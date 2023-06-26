@@ -7,6 +7,14 @@
 </template>
 
 
+
+<script setup>
+  const props = defineProps({
+    marketplaceImage: String,
+    marketplaceLink: String
+  })
+</script>
+
 <style>
 .marketplace {
   width: 5rem;
@@ -30,10 +38,3 @@
   }
 }
 </style>
-
-<script setup>
-  const props = defineProps({
-    marketplaceImage: String,
-    marketplaceLink: String
-  })
-</script>

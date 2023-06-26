@@ -6,7 +6,7 @@
                 <img class="logo d-block mx-auto" src="../assets/images/pempek.png" alt="brand-logo" width="125">
             </div>
             <div class="address d-flex justify-content-center ">
-                <p class="fw-bold w-75">Cangkuang Road, Nagrak, Kec. Cangkuang, Kabupaten Bandung, Jawa Barat 40238</p>
+                <p class="fw-bold w-75">Jl. Cangkuang, Nagrak, Kec. Cangkuang, Kabupaten Bandung, Jawa Barat 40238</p>
             </div>
             <div class="social-icons">
                 <a class="icon" href="#"><font-awesome-icon class="font-awesome" :icon="['fab', 'facebook']" /></a>

@@ -96,14 +96,14 @@ onUnmounted(() => {
         </div>
       </div>
       <div class="container">
-        <div class="market d-flex justify-content-evenly flex-wrap">
-          <Marketplace marketplaceImage="src/assets/images/marketplace/tokopedia.png" />
-          <Marketplace marketplaceImage="src/assets/images/marketplace/gofood.png"
-            marketplaceLink="https://gofood.co.id/bandung/restaurant/pempek-princess-cangkuang-4bb1e789-67ba-4c7c-9445-66f1eefa239e" />
-          <Marketplace marketplaceImage="src/assets/images/marketplace/shopee.png"
-            marketplaceLink="https://shopee.co.id/pempekprincess" />
-          <Marketplace marketplaceImage="src/assets/images/marketplace/shopee-food.png" />
-        </div>
+   <div class="market d-flex justify-content-evenly flex-wrap">
+        <Marketplace marketplaceImage="@/assets/images/marketplace/tokopedia.png" />
+        <Marketplace marketplaceImage="@/assets/images/marketplace/gofood.png"
+          marketplaceLink="https://gofood.co.id/bandung/restaurant/pempek-princess-cangkuang-4bb1e789-67ba-4c7c-9445-66f1eefa239e" />
+        <Marketplace marketplaceImage="@/assets/images/marketplace/shopee.png"
+          marketplaceLink="https://shopee.co.id/pempekprincess" />
+        <Marketplace marketplaceImage="@/assets/images/marketplace/shopee-food.png" />
+      </div>
       </div>
     </section>
 

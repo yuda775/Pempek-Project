@@ -61,109 +61,109 @@
   </script>
 
 
-  <style>
-  .navbar {
-    font-family: var(--primary-font-family);
+<style>
+.navbar {
+  font-family: var(--primary-font-family);
+}
+
+.nav-link {
+  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  min-width: 125px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.button a {
+  font-size: 18px;
+  color: var(--primary-color);
+  background-color: #FFFFFF;
+  padding: 5px 30px;
+  border-radius: 2px;
+  text-decoration: none;
+  transition: background-color 0.8s;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 100px;
+}
+
+.nav-link:hover {
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+.button a:hover {
+  color: white;
+  background-color: transparent;
+  border: 2px solid white;
+  padding: 3px 28px;
+  /* Ubah padding sesuai dengan ukuran awal */
+}
+
+/* Perubahan untuk tampilan mobile */
+@media (max-width: 992px) {
+
+  .navbar,
+  .collapse .navbar-collapse {
+    background-color: #FFFFFF;
   }
 
-  .nav-link {
-    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
-    min-width: 125px;
+  .navbar-nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar-brand {
+    width: 100px;
+  }
+
+  .navbar-nav .nav-link {
+    margin: 0.5rem 0;
+  }
+
+  .button {
     text-align: center;
-    font-weight: 600;
+    margin: 2rem;
   }
 
   .button a {
-    font-size: 18px;
-    color: var(--primary-color);
-    background-color: #FFFFFF;
-    padding: 5px 30px;
-    border-radius: 2px;
-    text-decoration: none;
-    transition: background-color 0.8s;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 100px;
-  }
-
-  .nav-link:hover {
-    color: var(--primary-color);
-    font-weight: bold;
+    color: #FFFFFF;
+    background-color: var(--primary-color);
   }
 
   .button a:hover {
-    color: white;
-    background-color: transparent;
-    border: 2px solid white;
-    padding: 3px 28px;
-    /* Ubah padding sesuai dengan ukuran awal */
-  }
-
-  /* Perubahan untuk tampilan mobile */
-  @media (max-width: 992px) {
-
-    .navbar,
-    .collapse .navbar-collapse {
-      background-color: #FFFFFF;
-    }
-
-    .navbar-nav {
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .navbar-brand {
-      width: 100px;
-    }
-
-    .navbar-nav .nav-link {
-      margin: 0.5rem 0;
-    }
-
-    .button {
-      text-align: center;
-      margin: 2rem;
-    }
-
-    .button a {
-      color: #FFFFFF;
-      background-color: var(--primary-color);
-    }
-
-    .button a:hover {
-      color: var(--primary-color);
-      background-color: transparent;
-      border: 2px solid var(--primary-color);
-    }
-  }
-
-  /* Gaya untuk navbar dengan background putih saat scroll */
-  .scrolled {
-    background-color: #FFFFFF;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-  }
-
-  /* Gaya untuk navbar-link yang sedang aktif (kuning) */
-  .navbar .nav-link.active {
-    color: var(--primary-color);
-    border-bottom: 2px solid var(--primary-color);
-  }
-
-  /* Gaya untuk navbar-link saat dihover (bold) */
-  .navbar .nav-link:hover {
-    font-weight: bold;
-  }
-
-  .button.scrolled a {
-    color: #FFFFFF;
-    background-color: var(--primary-color);
-    /* Ubah warna background sesuai kebutuhan */  
-  }
-
-  .scrolled .button a:hover {
     color: var(--primary-color);
     background-color: transparent;
     border: 2px solid var(--primary-color);
-    padding: 2px 28px; /* Ubah padding sesuai dengan ukuran awal */
   }
+}
 
-  </style>
+/* Gaya untuk navbar dengan background putih saat scroll */
+.scrolled {
+  background-color: #FFFFFF;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Gaya untuk navbar-link yang sedang aktif (kuning) */
+.navbar .nav-link.active {
+  color: var(--primary-color);
+  border-bottom: 2px solid var(--primary-color);
+}
+
+/* Gaya untuk navbar-link saat dihover (bold) */
+.navbar .nav-link:hover {
+  font-weight: bold;
+}
+
+.button.scrolled a {
+  color: #FFFFFF;
+  background-color: var(--primary-color);
+  /* Ubah warna background sesuai kebutuhan */  
+}
+
+.scrolled .button a:hover {
+  color: var(--primary-color);
+  background-color: transparent;
+  border: 2px solid var(--primary-color);
+  padding: 2px 28px; /* Ubah padding sesuai dengan ukuran awal */
+}
+
+</style>
