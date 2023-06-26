@@ -100,11 +100,11 @@ onUnmounted(() => {
       </div>
       <div class="container">
         <div class="market d-flex justify-content-center gap-5 flex-wrap">
-          <Marketplace marketplaceImage="../public/images/marketplace/gofood.png"
+          <Marketplace marketplaceImage="../../public/images/marketplace/gofood.png"
             marketplaceLink="https://gofood.co.id/bandung/restaurant/pempek-princess-cangkuang-4bb1e789-67ba-4c7c-9445-66f1eefa239e" />
-          <Marketplace marketplaceImage="../public/images/marketplace/shopee.png"
+          <Marketplace marketplaceImage="../../public/images/marketplace/shopee.png"
             marketplaceLink="https://shopee.co.id/pempekprincess" />
-          <Marketplace marketplaceImage="../public/images/marketplace/shopee-food.png" />
+          <Marketplace marketplaceImage="../../public/images/marketplace/shopee-food.png" />
         </div>
       </div>
     </section>
