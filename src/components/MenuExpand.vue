@@ -22,6 +22,7 @@
 <script setup>
 import { ref } from 'vue';
 
+<<<<<<< HEAD
 const expanded = ref(false);
 
 const cards = [
@@ -54,5 +55,40 @@ const cards = [
     price: 'Rp.15.000 / porsi'
   },
 ];
+=======
+      cards: [
+        {
+          id: 1,
+          title: 'Pempek Lenjer',
+          description: 'Lenjer juga tidak memiliki isian apapun, sehinggsa bisa dikatakan sebagai versi original dari pempek.',
+          image: '../../products/lenjer.png',
+          price: 'Rp.15.000 / porsi'
+        },
+        {
+          id: 2,
+          title: 'Pempek Kerupuk',
+          description: 'Pempek Kerupuk, Kriuk kriuk.',
+          image: '../../products/kerupuk.png',
+          price: 'Rp.15.000 / porsi'
+        },
+        {
+          id: 3,
+          title: 'Pempek Premium',
+          description: 'Pempek Princess Premium artinya menggunakan resep dan bahan yang premium. Perbandingan ikan tenggiri dan sagu 1:0,5 ya kawan dan air yang sangat sedikit.',
+          image: '../../products/kemasan.png',
+          price: 'Rp.15.000 / porsi'
+        },
+        {
+          id: 4,
+          title: 'Cuko Kamu',
+          description: 'Cuko Palembang, untuk campuran pempek atau makanan lainnya',
+          image: '../../products/cuko.png',
+          price: 'Rp.15.000 / porsi'
+        },
+      ]
+    };
+  }
+};
+>>>>>>> d5f1ff29971cc2b2984155bc748de0981e29eea4
 </script>
 
