@@ -57,7 +57,7 @@ onUnmounted(() => {
   <header>
     <nav class="navbar navbar-expand-lg fixed-top" :class="{ 'scrolled': isScrolled }">
       <div class="container">
-        <a class="navbar-brand" href="#"><img src="../public/images/pempek.png" alt="brand-logo" width="125" /></a>
+        <a class="navbar-brand" href="#"><img src="../public/brand-logo.png" alt="brand-logo" width="125" /></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
           aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -90,7 +90,7 @@ onUnmounted(() => {
               <a class="link" href="#menu">View Our Menu</a>
             </div>
             <div class="col-lg-5" style="filter: drop-shadow(2px 2px 10px rgba(0, 0, 0, 0.25));">
-              <img class="d-block mx-auto" src="../public/images/pempek-hero.png" width="">
+              <img class="d-block mx-auto" src="../public/pempek-hero.png" width="">
             </div>
           </div>
         </div>
@@ -100,11 +100,11 @@ onUnmounted(() => {
       </div>
       <div class="container">
         <div class="market d-flex justify-content-center gap-5 flex-wrap">
-          <Marketplace marketplaceImage="../../public/images/marketplace/gofood.png"
+          <Marketplace marketplaceImage="../../public/marketplace/gofood.png"
             marketplaceLink="https://gofood.co.id/bandung/restaurant/pempek-princess-cangkuang-4bb1e789-67ba-4c7c-9445-66f1eefa239e" />
-          <Marketplace marketplaceImage="../../public/images/marketplace/shopee.png"
+          <Marketplace marketplaceImage="../../public/marketplace/shopee.png"
             marketplaceLink="https://shopee.co.id/pempekprincess" />
-          <Marketplace marketplaceImage="../../public/images/marketplace/shopee-food.png" />
+          <Marketplace marketplaceImage="../../public/marketplace/shopee-food.png" />
         </div>
       </div>
     </section>
@@ -116,7 +116,7 @@ onUnmounted(() => {
           <div class="line"></div>
           <div class="d-flex flex-wrap align-items-center justify-content-evenly tentangKami-content mt-5">
             <div class="col-lg-4">
-              <img src="../public/images/about.png" style="filter: drop-shadow(2px 2px 70px rgba(0, 0, 0, 0.25));">
+              <img src="../public/about.png" style="filter: drop-shadow(2px 2px 70px rgba(0, 0, 0, 0.25));">
             </div>
 
             <div class="col-lg-8 description-tentang-kami lh-lg  px-5" style="text-indent: 45px;">
@@ -162,6 +162,12 @@ onUnmounted(() => {
       </div>
     </section>
 
+    <section class="maps">
+      <iframe width="100%" height="100%" id="gmap_canvas"
+        src="https://maps.google.com/maps?q=-7.052070,107.543132&t=&z=10&ie=UTF8&iwloc=&output=embed" frameborder="0"
+        scrolling="no" marginheight="0" marginwidth="0"></iframe>
+    </section>
+
     <section class="testimoni">
       <h2 class="mt-4 mb-3 text-center headline-2">Testimoni</h2>
       <div class="line"></div>
@@ -169,17 +175,17 @@ onUnmounted(() => {
         <div id="carouselExampleRide" class="carousel slide" data-bs-ride="true">
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <TestimoniCardLarge profilePhoto="../../public/images/profile/aldi.jpg" username="@john.doe"
+              <TestimoniCardLarge profilePhoto="../../public/profile/aldi.jpg" username="@john.doe"
                 description="Maaci umi kirimannya, ini pempek kates yang bisa dikirim ke jakarta yang isinyo aman dan masih seger. mantabb"
                 :rating="4" />
             </div>
             <div class="carousel-item">
-              <TestimoniCardLarge profilePhoto="../../public/images/profile/aldi.jpg" username="@jane.smith"
+              <TestimoniCardLarge profilePhoto="../../public/profile/aldi.jpg" username="@jane.smith"
                 description="Alhamdulillah, Laksana nyo nyampe sebelum buko plus bonus talam ubi ungu, baik banget mevaah, mokaseh @pempek_princess. “maka nikmat Tuhan manalagi yg kau dusta”"
                 :rating="5" />
             </div>
             <div class="carousel-item">
-              <TestimoniCardLarge profilePhoto="../../public/images/profile/aldi.jpg" username="@alex.williams"
+              <TestimoniCardLarge profilePhoto="../../public/profile/aldi.jpg" username="@alex.williams"
                 description="Pempek Princess, lezatnya sebuah pempek tak hanya memiliki cita rasa enak dilidah saja, tetapi juga perpaduan bumbu yang menggugah selera serta membuat ketagihan."
                 :rating="5" />
             </div>
@@ -196,11 +202,6 @@ onUnmounted(() => {
       </div>
     </section>
 
-    <section class="maps">
-      <iframe width="100%" height="100%" id="gmap_canvas"
-        src="https://maps.google.com/maps?q=-7.052070,107.543132&t=&z=10&ie=UTF8&iwloc=&output=embed" frameborder="0"
-        scrolling="no" marginheight="0" marginwidth="0"></iframe>
-    </section>
 
     <section id="Footer">
       <Footer />

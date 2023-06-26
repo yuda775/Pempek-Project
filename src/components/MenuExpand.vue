@@ -29,28 +29,28 @@ const cards = [
     id: 1,
     title: 'Pempek Lenjer',
     description: 'Lenjer juga tidak memiliki isian apapun, sehinggsa bisa dikatakan sebagai versi original dari pempek.',
-    image: '..././public/images/lenjer.png',
+    image: '..././public/lenjer.png',
     price: 'Rp.15.000 / porsi'
   },
   {
     id: 2,
     title: 'Pempek Kerupuk',
     description: 'Pempek Kerupuk, Kriuk kriuk.',
-    image: '..././public/images/kerupuk.png',
+    image: '..././public/kerupuk.png',
     price: 'Rp.15.000 / porsi'
   },
   {
     id: 3,
     title: 'Pempek Premium',
     description: 'Pempek Princess Premium artinya menggunakan resep dan bahan yang premium. Perbandingan ikan tenggiri dan sagu 1:0,5 ya kawan dan air yang sangat sedikit.',
-    image: '..././public/images/kemasan.png',
+    image: '..././public/kemasan.png',
     price: 'Rp.15.000 / porsi'
   },
   {
     id: 4,
     title: 'Cuko Kamu',
     description: 'Cuko Palembang, untuk campuran pempek atau makanan lainnya',
-    image: '..././public/images/cuko.png',
+    image: '..././public/cuko.png',
     price: 'Rp.15.000 / porsi'
   },
 ];

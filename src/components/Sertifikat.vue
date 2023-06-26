@@ -12,7 +12,7 @@
             </button>
           </div>
           <div class="modal-body">
-            <img src="../../public/images/sertifikat.jpeg" class="img-fluid" alt="Gambar Modal">
+            <img src="../../public/sertifikat.jpeg" class="img-fluid" alt="Gambar Modal">
           </div>
           <div class="moda-footer">
             <p class="px-3">Untuk Informasi lebih lengkap klik link <a href="">disini</a></p>
@@ -64,4 +64,5 @@ export default {
 
 .modal-dialog {
   min-width: 25vw;
-}</style>
+}
+</style>
