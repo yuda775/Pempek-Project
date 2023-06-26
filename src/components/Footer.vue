@@ -3,7 +3,7 @@
     <div class="footer-content text-center position-relative">
         <div class=" position-relative z-1">
             <div class="logo-container">
-                <img class="logo d-block mx-auto" src="../assets/images/pempek.png" alt="brand-logo" width="125">
+                <img class="logo d-block mx-auto" src="../../public/images/pempek.png" alt="brand-logo" width="125">
             </div>
             <div class="address d-flex justify-content-center ">
                 <p class="fw-bold w-75">Jl. Cangkuang, Nagrak, Kec. Cangkuang, Kabupaten Bandung, Jawa Barat 40238</p>
@@ -17,51 +17,54 @@
                 <p>&copy; 2023 All rights reserved by Nash<span class="kuning"> Tech</span></p>
             </div>
         </div>
-            <div class="vector-footer position-absolute z-0">
-                <Vectorfooter/>
-            </div>
+        <div class="vector-footer position-absolute z-0">
+            <Vectorfooter />
+        </div>
     </div>
-  </template>
+</template>
   
 <style scoped>
-.vector-footer{
+.vector-footer {
     bottom: 0px;
     right: 0;
 }
+
 .font-awesome {
     width: min-content;
 }
+
 .social-icons {
     display: flex;
     justify-content: center;
     gap: 15px;
 }
+
 .footer-content {
-margin-top: 200px;
-grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-gap: 20px;
-align-items: center;
-text-align: center;
+    margin-top: 200px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    align-items: center;
+    text-align: center;
 }
 
 .address {
-font-weight: bold;
-font-style: italic;
+    font-weight: bold;
+    font-style: italic;
 }
 
 .icon {
-font-size: 25px;
-border-radius: 100%;
-color: var(--secondary-color);
-transition: color 0.3s ease;
+    font-size: 25px;
+    border-radius: 100%;
+    color: var(--secondary-color);
+    transition: color 0.3s ease;
 }
 
 .icon:hover {
-color: var(--primary-color);
+    color: var(--primary-color);
 }
 
 .kuning {
-color: var(--primary-color);
+    color: var(--primary-color);
 }
 
 @media (max-width: 991.98px) {
@@ -70,12 +73,10 @@ color: var(--primary-color);
         right: -40px
     }
 }
-
 </style>
   
 
-<script>
-import vectorfooter from './icons/vectorfooter.vue';
+<script >
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faFacebook, faTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons'
@@ -84,9 +85,9 @@ import Vectorfooter from './icons/vectorfooter.vue';
 library.add(faFacebook, faTwitter, faInstagram)
 
 export default {
-  components: {
-    FontAwesomeIcon,
-    Vectorfooter
-}
+    components: {
+        FontAwesomeIcon,
+        Vectorfooter
+    }
 }
 </script>

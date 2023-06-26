@@ -12,7 +12,7 @@
             </button>
           </div>
           <div class="modal-body">
-            <img src="../assets/images/sertifikat.jpeg" class="img-fluid" alt="Gambar Modal">
+            <img src="../../public/images/sertifikat.jpeg" class="img-fluid" alt="Gambar Modal">
           </div>
           <div class="moda-footer">
             <p class="px-3">Untuk Informasi lebih lengkap klik link <a href="">disini</a></p>
@@ -27,7 +27,7 @@
 export default {
   data() {
     return {
-      showModal: false,      
+      showModal: false,
     };
   },
   methods: {
@@ -46,19 +46,22 @@ export default {
 .modal {
   margin-top: 2rem;
 }
+
 .modal-header {
   padding: 0.5px 1rem;
 }
+
 .tombol-halal {
   background-color: var(--primary-color);
   color: white;
 }
+
 .tombol-halal:hover {
   background-color: #f5f5f5;
   color: var(--primary-color);
   font-weight: bold;
 }
-.modal-dialog {  
-  min-width: 25vw;  
-}
-</style>
+
+.modal-dialog {
+  min-width: 25vw;
+}</style>
