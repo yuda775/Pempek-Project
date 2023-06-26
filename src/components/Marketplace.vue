@@ -1,7 +1,7 @@
 <template>
   <div class="marketplace d-flex justify-content-center align-content-center align-items-center m-2">
     <a :href="marketplaceLink">
-      <img :src="`../../marketplace/${marketplaceImage}`" />
+      <img :src="`${marketplaceImage}`" />
     </a>
   </div>
 </template>
