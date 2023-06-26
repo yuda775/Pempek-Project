@@ -3,11 +3,7 @@
     <div class="footer-content text-center position-relative">
         <div class=" position-relative z-1">
             <div class="logo-container">
-<<<<<<< HEAD
                 <img class="logo d-block mx-auto" src="../../public/images/pempek.png" alt="brand-logo" width="125">
-=======
-                <img class="logo d-block mx-auto" src="../assets/images/brand-logo.png" alt="brand-logo" width="125">
->>>>>>> d5f1ff29971cc2b2984155bc748de0981e29eea4
             </div>
             <div class="address d-flex justify-content-center ">
                 <p class="fw-bold w-75">Jl. Cangkuang, Nagrak, Kec. Cangkuang, Kabupaten Bandung, Jawa Barat 40238</p>
@@ -80,7 +76,7 @@
 </style>
   
 
-<script>
+<script >
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faFacebook, faTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons'
