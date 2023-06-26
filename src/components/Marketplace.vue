@@ -1,5 +1,5 @@
 <template>
-  <div class="marketplace d-flex justify-content-center align-items-center m-2">
+  <div class="marketplace d-flex justify-content-center align-content-center align-items-center m-2">
     <a :href="marketplaceLink">
       <img :src="marketplaceImage">
     </a>
@@ -23,7 +23,7 @@
 }
 
 
-@media (max-width: 992px){
+@media (max-width: 992px) {
   .marketplace {
     width: 4rem;
     height: 4rem;
@@ -32,8 +32,8 @@
 </style>
 
 <script setup>
-  const props = defineProps({
-    marketplaceImage: String,
-    marketplaceLink: String
-  })
+const props = defineProps({
+  marketplaceImage: String,
+  marketplaceLink: String
+})
 </script>

@@ -29,15 +29,15 @@ const setActiveSection = (section) => {
 
 const handleScroll = () => {
   isScrolled.value = window.scrollY > 0;
-    const scrollPosition = window.scrollY;
-    // Cek posisi scroll dan perbarui item navbar yang aktif
-    if (scrollPosition >= 0 && scrollPosition < 500) {
-      activeSection.value = 'beranda';
-    } else if (scrollPosition >= 500 && scrollPosition < 1000) {
-      activeSection.value = 'tentang-kami';
-    } else if (scrollPosition >= 1000) {
-      activeSection.value = 'menu';
-    }
+  const scrollPosition = window.scrollY;
+  // Cek posisi scroll dan perbarui item navbar yang aktif
+  if (scrollPosition >= 0 && scrollPosition < 500) {
+    activeSection.value = 'beranda';
+  } else if (scrollPosition >= 500 && scrollPosition < 1000) {
+    activeSection.value = 'tentang-kami';
+  } else if (scrollPosition >= 1000) {
+    activeSection.value = 'menu';
+  }
 };
 
 onMounted(() => {
@@ -55,25 +55,28 @@ onUnmounted(() => {
 
 <template>
   <header>
-      <nav class="navbar navbar-expand-lg fixed-top" :class="{ 'scrolled': isScrolled }">
-        <div class="container">
-          <a class="navbar-brand" href="#"><img src="src/assets/images/pempek.png" alt="brand-logo" width="125"></a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav mx-auto">
-              <a class="nav-link" :class="{ 'active': activeSection === 'beranda' }" @click="setActiveSection('beranda')" href="#beranda">Beranda</a>
-              <a class="nav-link" :class="{ 'active': activeSection === 'tentang-kami' }" @click="setActiveSection('tentang-kami')" href="#tentang-kami">Tentang Kami</a>
-              <a class="nav-link" :class="{ 'active': activeSection === 'menu' }" @click="setActiveSection('menu')" href="#menu">Menu</a>
-            </div>
-            <div class="button" :class="{ 'scrolled': isScrolled }">
-              <a class="fw-bold" href="https://api.whatsapp.com/message/23Z4KIC2KKJXA1?autoload=1&app_absent=0">Kontak</a>
-            </div>
+    <nav class="navbar navbar-expand-lg fixed-top" :class="{ 'scrolled': isScrolled }">
+      <div class="container">
+        <a class="navbar-brand" href="#"><img src="../public/images/pempek.png" alt="brand-logo" width="125"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav mx-auto">
+            <a class="nav-link" :class="{ 'active': activeSection === 'beranda' }" @click="setActiveSection('beranda')"
+              href="#beranda">Beranda</a>
+            <a class="nav-link" :class="{ 'active': activeSection === 'tentang-kami' }"
+              @click="setActiveSection('tentang-kami')" href="#tentang-kami">Tentang Kami</a>
+            <a class="nav-link" :class="{ 'active': activeSection === 'menu' }" @click="setActiveSection('menu')"
+              href="#menu">Menu</a>
+          </div>
+          <div class="button" :class="{ 'scrolled': isScrolled }">
+            <a class="fw-bold" href="https://api.whatsapp.com/message/23Z4KIC2KKJXA1?autoload=1&app_absent=0">Kontak</a>
           </div>
         </div>
-      </nav>
+      </div>
+    </nav>
   </header>
 
   <main>
@@ -87,7 +90,7 @@ onUnmounted(() => {
               <a class="link" href="#menu">View Our Menu</a>
             </div>
             <div class="col-lg-5" style="filter: drop-shadow(2px 2px 10px rgba(0, 0, 0, 0.25));">
-              <img class="d-block mx-auto" src="src/assets/images/PempekJumbotron.png" width="80%">
+              <img class="d-block mx-auto" src="../public/images/pempek-hero.png" width="">
             </div>
           </div>
         </div>
@@ -96,13 +99,12 @@ onUnmounted(() => {
         </div>
       </div>
       <div class="container">
-        <div class="market d-flex justify-content-evenly flex-wrap">
-          <Marketplace marketplaceImage="src/assets/images/marketplace/tokopedia.png" />
-          <Marketplace marketplaceImage="src/assets/images/marketplace/gofood.png"
+        <div class="market d-flex justify-content-center gap-5 flex-wrap">
+          <Marketplace marketplaceImage="../public/images/marketplace/gofood.png"
             marketplaceLink="https://gofood.co.id/bandung/restaurant/pempek-princess-cangkuang-4bb1e789-67ba-4c7c-9445-66f1eefa239e" />
-          <Marketplace marketplaceImage="src/assets/images/marketplace/shopee.png"
+          <Marketplace marketplaceImage="../public/images/marketplace/shopee.png"
             marketplaceLink="https://shopee.co.id/pempekprincess" />
-          <Marketplace marketplaceImage="src/assets/images/marketplace/shopee-food.png" />
+          <Marketplace marketplaceImage="../public/images/marketplace/shopee-food.png" />
         </div>
       </div>
     </section>
@@ -114,7 +116,7 @@ onUnmounted(() => {
           <div class="line"></div>
           <div class="d-flex flex-wrap align-items-center justify-content-evenly tentangKami-content mt-5">
             <div class="col-lg-4">
-              <img src="src/components/icons/pempek 1.png" style="filter: drop-shadow(2px 2px 70px rgba(0, 0, 0, 0.25));">
+              <img src="../public/images/about.png" style="filter: drop-shadow(2px 2px 70px rgba(0, 0, 0, 0.25));">
             </div>
 
             <div class="col-lg-8 description-tentang-kami lh-lg  px-5" style="text-indent: 45px;">
@@ -161,31 +163,35 @@ onUnmounted(() => {
     </section>
 
     <section class="testimoni">
+      <h2 class="mt-4 mb-3 text-center headline-2">Testimoni</h2>
+      <div class="line"></div>
       <div class="container">
-        <h2 class="mt-4 mb-3 text-center headline-2">Testimoni</h2>
-        <div class="line"></div>
-        <div class="row mt-5 align-items-stretch justify-content-around">
-          <div class="col-lg-6 p-2">
-            <div class="d-flex justify-content-center">
-              <TestimoniCardLarge profilePhoto="src/assets/images/profile/aldi.jpg" username="@john.doe"
+        <div id="carouselExampleRide" class="carousel slide" data-bs-ride="true">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <TestimoniCardLarge profilePhoto="../public/images/profile/aldi.jpg" username="@john.doe"
                 description="Maaci umi kirimannya, ini pempek kates yang bisa dikirim ke jakarta yang isinyo aman dan masih seger. mantabb"
                 :rating="4" />
             </div>
-          </div>
-          <div class="col-lg-6 p-2">
-            <div class="d-flex justify-content-center">
-              <TestimoniCardLarge profilePhoto="src/assets/images/profile/aldi.jpg" username="@jane.smith"
+            <div class="carousel-item">
+              <TestimoniCardLarge profilePhoto="../public/images/profile/aldi.jpg" username="@jane.smith"
                 description="Alhamdulillah, Laksana nyo nyampe sebelum buko plus bonus talam ubi ungu, baik banget mevaah, mokaseh @pempek_princess. “maka nikmat Tuhan manalagi yg kau dusta”"
                 :rating="5" />
             </div>
-          </div>
-          <div class="col-lg-6 p-2">
-            <div class="d-flex justify-content-center">
-              <TestimoniCardLarge profilePhoto="src/assets/images/profile/aldi.jpg" username="@alex.williams"
+            <div class="carousel-item">
+              <TestimoniCardLarge profilePhoto="../public/images/profile/aldi.jpg" username="@alex.williams"
                 description="Pempek Princess, lezatnya sebuah pempek tak hanya memiliki cita rasa enak dilidah saja, tetapi juga perpaduan bumbu yang menggugah selera serta membuat ketagihan."
                 :rating="5" />
             </div>
           </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
         </div>
       </div>
     </section>
@@ -208,73 +214,81 @@ main {
   overflow: hidden;
 }
 
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(100%);
+}
+
+
 /* Navbar */
-  .navbar {
-    font-family: var(--primary-font-family);
-  }
+.navbar {
+  font-family: var(--primary-font-family);
+}
 
-  .nav-link {
-    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
-    min-width: 125px;
-    text-align: center;
-    font-weight: 600;
-  }
+.nav-link {
+  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  min-width: 125px;
+  text-align: center;
+  font-weight: 600;
+}
 
-  .button a {
-    font-size: 18px;
-    color: var(--primary-color);
-    background-color: #FFFFFF;
-    padding: 5px 30px;
-    border-radius: 2px;
-    text-decoration: none;
-    transition: background-color 0.8s;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 100px;
-  }
+.button a {
+  font-size: 18px;
+  color: var(--primary-color);
+  background-color: #FFFFFF;
+  padding: 5px 30px;
+  border-radius: 2px;
+  text-decoration: none;
+  transition: background-color 0.8s;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 100px;
+}
 
-  .nav-link:hover {
-    color: var(--primary-color);
-    font-weight: bold;
-  }
+.nav-link:hover {
+  color: var(--primary-color);
+  font-weight: bold;
+}
 
-  .button a:hover {
-    color: white;
-    background-color: transparent;
-    border: 2px solid white;
-    padding: 3px 28px;
-    /* Ubah padding sesuai dengan ukuran awal */
-  }
+.button a:hover {
+  color: white;
+  background-color: transparent;
+  border: 2px solid white;
+  padding: 3px 28px;
+  /* Ubah padding sesuai dengan ukuran awal */
+}
 
 
-  /* Gaya untuk navbar dengan background putih saat scroll */
-  .scrolled {
-    background-color: #FFFFFF;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-  }
+/* Gaya untuk navbar dengan background putih saat scroll */
+.scrolled {
+  background-color: #FFFFFF;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
 
-  /* Gaya untuk navbar-link yang sedang aktif (kuning) */
-  .navbar .nav-link.active {
-    color: var(--primary-color);
-    border-bottom: 2px solid var(--primary-color);
-  }
+/* Gaya untuk navbar-link yang sedang aktif (kuning) */
+.navbar .nav-link.active {
+  color: var(--primary-color);
+  border-bottom: 2px solid var(--primary-color);
+}
 
-  /* Gaya untuk navbar-link saat dihover (bold) */
-  .navbar .nav-link:hover {
-    font-weight: bold;
-  }
+/* Gaya untuk navbar-link saat dihover (bold) */
+.navbar .nav-link:hover {
+  font-weight: bold;
+}
 
-  .button.scrolled a {
-    color: #FFFFFF;
-    background-color: var(--primary-color);
-    /* Ubah warna background sesuai kebutuhan */  
-  }
+.button.scrolled a {
+  color: #FFFFFF;
+  background-color: var(--primary-color);
+  /* Ubah warna background sesuai kebutuhan */
+}
 
-  .scrolled .button a:hover {
-    color: var(--primary-color);
-    background-color: transparent;
-    border: 2px solid var(--primary-color);
-    padding: 2px 28px; /* Ubah padding sesuai dengan ukuran awal */
-  }
+.scrolled .button a:hover {
+  color: var(--primary-color);
+  background-color: transparent;
+  border: 2px solid var(--primary-color);
+  padding: 2px 28px;
+  /* Ubah padding sesuai dengan ukuran awal */
+}
+
 /* Akhir Navbar */
 
 .market {
@@ -353,39 +367,41 @@ main {
 
 
 @media (max-width: 992px) {
-    .navbar,
-    .collapse .navbar-collapse {
-      background-color: #FFFFFF;
-    }
 
-    .navbar-nav {
-      flex-direction: column;
-      align-items: center;
-    }
+  .navbar,
+  .collapse .navbar-collapse {
+    background-color: #FFFFFF;
+  }
 
-    .navbar-brand {
-      width: 100px;
-    }
+  .navbar-nav {
+    flex-direction: column;
+    align-items: center;
+  }
 
-    .navbar-nav .nav-link {
-      margin: 0.5rem 0;
-    }
+  .navbar-brand {
+    width: 100px;
+  }
 
-    .button {
-      text-align: center;
-      margin: 2rem;
-    }
+  .navbar-nav .nav-link {
+    margin: 0.5rem 0;
+  }
 
-    .button a {
-      color: #FFFFFF;
-      background-color: var(--primary-color);
-    }
+  .button {
+    text-align: center;
+    margin: 2rem;
+  }
 
-    .button a:hover {
-      color: var(--primary-color);
-      background-color: transparent;
-      border: 2px solid var(--primary-color);
-    }
+  .button a {
+    color: #FFFFFF;
+    background-color: var(--primary-color);
+  }
+
+  .button a:hover {
+    color: var(--primary-color);
+    background-color: transparent;
+    border: 2px solid var(--primary-color);
+  }
+
   .market {
     padding-top: 2rem;
   }
@@ -432,4 +448,5 @@ main {
   .description-tentang-kami {
     margin-top: 25px;
   }
-}</style>
+}
+</style>
