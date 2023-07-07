@@ -7,6 +7,7 @@ import Footer from './components/Footer.vue';
 import Menu from './components/Menu.vue';
 import MenuExpand from './components/MenuExpand.vue';
 import Sertifikat from './components/Sertifikat.vue';
+import Menus from './components/Menus.vue';
 
 
 import { ref, onMounted, onUnmounted } from 'vue';
@@ -148,7 +149,7 @@ onUnmounted(() => {
       </div>
     </section>
 
-    <section id="menu" class="pb-5">
+    <!-- <section id="menu" class="pb-5">
       <h2 class="headline-2">All Menu</h2>
       <div class="line"></div>
       <Menu />
@@ -160,6 +161,12 @@ onUnmounted(() => {
           {{ expand ? 'Tampilkan Lebih Sedikit' : 'Lihat Lebih Banyak' }}
         </button>
       </div>
+    </section> -->
+    
+    <section id="menu">
+      <h2 class="headline-2">All Menu</h2>
+      <div class="line"></div>
+      <menus/>
     </section>
 
     <section class="maps">
@@ -175,17 +182,17 @@ onUnmounted(() => {
         <div id="carouselExampleRide" class="carousel slide" data-bs-ride="true">
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <TestimoniCardLarge profilePhoto="/assets/profile/aldi.jpg" username="@john.doe"
+              <TestimoniCardLarge profilePhoto="/assets/profile/aldi.jpg" username="@bundaaratu_"
                 description="Maaci umi kirimannya, ini pempek kates yang bisa dikirim ke jakarta yang isinyo aman dan masih seger. mantabb"
                 :rating="4" />
             </div>
             <div class="carousel-item">
-              <TestimoniCardLarge profilePhoto="/assets/profile/aldi.jpg" username="@jane.smith"
+              <TestimoniCardLarge profilePhoto="/assets/profile/aldi.jpg" username="@iranurfaz_"
                 description="Alhamdulillah, Laksana nyo nyampe sebelum buko plus bonus talam ubi ungu, baik banget mevaah, mokaseh @pempek_princess. “maka nikmat Tuhan manalagi yg kau dusta”"
                 :rating="5" />
             </div>
             <div class="carousel-item">
-              <TestimoniCardLarge profilePhoto="/assets/profile/aldi.jpg" username="@alex.williams"
+              <TestimoniCardLarge profilePhoto="/assets/profile/aldi.jpg" username="@widya_rose"
                 description="Pempek Princess, lezatnya sebuah pempek tak hanya memiliki cita rasa enak dilidah saja, tetapi juga perpaduan bumbu yang menggugah selera serta membuat ketagihan."
                 :rating="5" />
             </div>
@@ -201,7 +208,6 @@ onUnmounted(() => {
         </div>
       </div>
     </section>
-
 
     <section id="Footer">
       <Footer />

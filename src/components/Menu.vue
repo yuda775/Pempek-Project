@@ -104,56 +104,56 @@ export default {
           id: 1,
           title: 'Pempek Kapal Selam',
           description: 'Memliki bentuk seperti  kapal selam,  pempek ini berisikan telor didalam. pempek ini bisa disajikan dengan timun ',
-          image: '/assets/products/kapalselam.png',
+          image: 'assets/products/kapalselam.png',
           price: 'Rp.15.000 / porsi'
         },
         {
           id: 2,
           title: 'Pempek Adaan',
           description: 'Berbentuk bulat seperti bola ping pong. Pempek ini terbuat juga dari ikan, sehingga sekilas memang seperti bakso ikan.',
-          image: '/assets/products/adaan.png',
+          image: 'assets/products/adaan.png',
           price: 'Rp.15.000 / porsi'
         },
         {
           id: 3,
           title: 'Pempek Kulit',
           description: 'Pempek kulit biasanya menggunakan campuran tepung dan adonan kulit ikan. Ikan yang paling sering digunakan adalah ikan tenggiri.',
-          image: '/assets/products/kulit.png',
+          image: 'assets/products/kulit.png',
           price: 'Rp.15.000 / porsi'
         },
         {
           id: 4,
           title: 'Pempek Keriting',
           description: 'Pempek keriting umumnya hanya ditemukan di wilayah Palembang. dikarenakan proses pembuatannya yang rumit dan membutuhkan waktu yang lama.',
-          image: '/assets/products/keriting.png',
+          image: 'assets/products/keriting.png',
           price: 'Rp.15.000 / porsi'
         },
         {
           id: 5,
           title: 'Pempek Tunu',
           description: 'Pempek tunu mirip seperti pempek lenggang karena biasanya diolah dengan dibakar atau dipanggang.',
-          image: '/assets/products/panggang.png',
+          image: 'assets/products/panggang.png',
           price: 'Rp.15.000 / porsi'
         },
         {
           id: 6,
           title: 'Pempek Pistel Dos',
           description: 'Adonan yang sama dengan lenjer namun dibentuk seperti pastel dan memiliki isan pepaya muda.',
-          image: '/assets/products/pempekdos.png',
+          image: 'assets/products/pempekdos.png',
           price: 'Rp.15.000 / porsi'
         },
         {
           id: 7,
           title: 'Pempek Otak-otak',
           description: 'Pempek Otak-otak yang dibungkus dengan daun pisang, memiliki bentuk lonjong dapat dipadukan dengan cuko merah.',
-          image: '/assets/products/otakotak.png',
+          image: 'assets/products/otakotak.png',
           price: 'Rp.15.000 / porsi'
         },
         {
           id: 8,
           title: 'Pempek Tekwan',
           description: 'Tekwan merupakan varian dari pempek, berbahan dasar dari sagu dan ikan tersebut. Biasanya diberi tambahan jamur kuping',
-          image: '/assets/products/tekwan.png',
+          image: 'assets/products/tekwan.png',
           price: 'Rp.15.000 / porsi'
         },
 
