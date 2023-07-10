@@ -162,11 +162,11 @@ onUnmounted(() => {
         </button>
       </div>
     </section> -->
-    
+
     <section id="menu">
       <h2 class="headline-2">All Menu</h2>
       <div class="line"></div>
-      <menus/>
+      <menus />
     </section>
 
     <section class="maps">
@@ -453,7 +453,7 @@ main {
   }
 
   .description-tentang-kami {
-    margin-top: 25px;
+    margin-top: 14px;
   }
 }
 </style>

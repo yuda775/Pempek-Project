@@ -5,13 +5,13 @@
                 aria-current="true" aria-label="Slide 1"></button>
             <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
         </div>
-        <div class="carousel-inner">
+        <div class="carousel-inner container">
             <div class="carousel-item active" data-bs-interval="10000">
-                <div class="row container mx-auto mt-5">
+                <div class="row mx-auto mt-5">
                     <div class="col-lg-5">
                         <div class="main-menu me-2">
                             <img src="/assets/products/headlinemenu.jpg" alt="headline menu image">
-                            <h2 class="mt-4">Pempek Princess Premium</h2>
+                            <h2 class="mt-4 fw-bold">Pempek Princess Premium</h2>
                             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam debitis veniam, doloribus
                                 maxime ad vero?
                             </p>
@@ -21,7 +21,7 @@
                         <div class="d-flex flex-wrap justify-content-between">
                             <div class="sub-menu">
                                 <img src="/assets/products/adaan.png" width="200">
-                                <h2> Pemepek Adaan</h2>
+                                <h2>Pemepek Adaan</h2>
                                 <p>Pempek adaan digoreng langsung setelah dibentuk bulat dari adonan, tanpa melalui tahap
                                     perebusan terlebih dahulu. </p>
                             </div>
@@ -59,7 +59,7 @@
                 </div>
             </div>
             <div class="carousel-item" data-bs-interval="2000">
-                <div class="row container mx-auto mt-5">
+                <div class="row mx-auto mt-5">
                     <div class="col-lg-7">
                         <div class="d-flex flex-wrap justify-content-between">
                             <div class="sub-menu">
@@ -100,7 +100,7 @@
                     <div class="col-lg-5">
                         <div class="main-menu me-2">
                             <img src="/assets/products/pempek-headline2.jpg" alt="headline menu image">
-                            <h2 class="mt-4">Ikan ikan apa yang bikin baper?</h2>
+                            <h2 class="mt-4 fw-bold">Ikan ikan apa yang bikin baper?</h2>
                             <p>Ikan stop loving you.
                             </p>
                         </div>
@@ -137,6 +137,10 @@ img {
     border-radius: 3px;
 }
 
+.carousel-item {
+    padding: 10px;
+}
+
 .row {
     margin: 0;
     padding: 0;
@@ -150,6 +154,7 @@ img {
 
 .sub-menu img {
     width: 100%;
+    height: 130px;
     max-height: 150px;
     object-fit: cover;
     margin-bottom: 10px;
@@ -165,10 +170,39 @@ img {
     color: #777;
 }
 
+@media screen and (max-width: 1024px) {
+    .sub-menu {
+        width: 30%;
+    }
+
+    .sub-menu img {
+        height: 100px;
+    }
+
+    .sub-menu h2 {
+        font-size: 14px;
+    }
+
+    .sub-menu p {
+        font-size: 12px;
+    }
+}
+
 @media screen and (max-width: 991px) {
     .sub-menu {
-        width: 150px;
-        margin-bottom: 20px;
+        width: 30%;
+    }
+
+    .sub-menu img {
+        height: 70px;
+    }
+
+    .sub-menu h2 {
+        font-size: 13px;
+    }
+
+    .sub-menu p {
+        font-size: 12px;
     }
 }
 </style>
